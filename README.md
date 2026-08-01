@@ -1,2 +1,3 @@
-# globaltelko-web
-Global Telko Informatika — Official Company Profile Website
+# Global Telko Informatika
+
+Official company profile website for Global Telko Informatika.
