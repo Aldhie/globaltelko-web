@@ -3,43 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Telko Informatika — High-Confidence Digital Architecture</title>
-  <meta name="description" content="Global Telko Informatika delivers high-confidence technology consulting, AI integration, cloud infrastructure, and modern systems design for organizations that need precision, trust, and strategic execution." />
-  <meta name="theme-color" content="#07111F" />
-  <meta property="og:title" content="Global Telko Informatika — High-Confidence Digital Architecture" />
-  <meta property="og:description" content="Technology consulting engineered to look sharp, feel premium, and perform under pressure." />
-  <meta property="og:type" content="website" />
+  <title>Global Telko Informatika — High-Confidence Technology Consulting</title>
+  <meta name="description" content="We engineer digital systems that look exclusive, perform reliably, and signal trust the moment they are seen." />
+  <meta name="theme-color" content="#060E1A" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            bg: '#07111F',
-            bg2: '#0B1628',
-            panel: 'rgba(10, 21, 39, 0.72)',
-            line: 'rgba(255,255,255,0.08)',
-            text: '#F8FAFC',
-            muted: '#A5B4C8',
-            blue: '#2498E3',
-            indigo: '#2F47A7',
-            cyan: '#6EC7FF',
-            lime: '#C6E313',
-            orange: '#F28B1D',
-            magenta: '#B93BAA',
-            silver: '#B8BBC2'
+            bg: '#060E1A',
+            panel: 'rgba(8,18,36,0.75)',
+            line: 'rgba(255,255,255,0.07)',
+            text: '#F1F5F9',
+            muted: '#8DA3BA',
+            blue: '#1F8EE0',
+            navy: '#1E3A7A',
+            cyan: '#5FC4EF',
+            lime: '#C2E31C',
+            orange: '#EF8C22',
+            rose: '#E04060',
+            violet: '#A855F7',
+            silver: '#9BAEC0'
           },
           fontFamily: {
-            sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
-          },
-          boxShadow: {
-            neon: '0 0 0 1px rgba(110,199,255,.22), 0 24px 90px rgba(36,152,227,.22)',
-            card: '0 30px 80px rgba(3, 10, 23, 0.35)'
-          },
-          backgroundImage: {
-            grid: 'linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px)',
-            spectrum: 'linear-gradient(135deg, #2498E3 0%, #6EC7FF 22%, #C6E313 42%, #F28B1D 64%, #E54B31 78%, #B93BAA 100%)',
-            hero: 'radial-gradient(circle at 18% 20%, rgba(36,152,227,.26), transparent 28%), radial-gradient(circle at 78% 16%, rgba(198,227,19,.12), transparent 18%), radial-gradient(circle at 72% 56%, rgba(185,59,170,.18), transparent 26%), linear-gradient(180deg, #07111F 0%, #081426 48%, #091727 100%)'
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            display: ['Inter', 'ui-sans-serif']
           }
         }
       }
@@ -47,121 +36,316 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body { background: #07111F; }
-    .glass { backdrop-filter: blur(18px); background: rgba(10, 21, 39, 0.68); }
-    .spectrum-border { position: relative; }
-    .spectrum-border::before {
+    :root {
+      --blue: #1F8EE0;
+      --cyan: #5FC4EF;
+      --lime: #C2E31C;
+      --orange: #EF8C22;
+      --rose: #E04060;
+      --violet: #A855F7;
+      --silver: #9BAEC0;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { color-scheme: dark; }
+    body {
+      background: #060E1A;
+      overflow-x: hidden;
+    }
+
+    /* ---- ANIMATED MESH BACKGROUND ---- */
+    .mesh-bg {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .mesh-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 12% 15%, rgba(31,142,224,.2), transparent),
+        radial-gradient(ellipse 50% 60% at 80% 10%, rgba(194,227,28,.08), transparent),
+        radial-gradient(ellipse 50% 50% at 80% 70%, rgba(168,85,247,.14), transparent),
+        radial-gradient(ellipse 40% 40% at 25% 80%, rgba(239,140,34,.1), transparent);
+      animation: meshPulse 12s ease-in-out infinite alternate;
+    }
+    @keyframes meshPulse {
+      0%   { opacity: .85; transform: scale(1); }
+      50%  { opacity: 1;   transform: scale(1.04) translateY(-10px); }
+      100% { opacity: .9;  transform: scale(1.02) translateY(4px); }
+    }
+    .mesh-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.032) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* ---- SPECTRUM BORDER ---- */
+    .s-border {
+      position: relative;
+    }
+    .s-border::before {
       content: '';
       position: absolute;
       inset: 0;
       border-radius: inherit;
       padding: 1px;
-      background: linear-gradient(135deg, rgba(36,152,227,.8), rgba(110,199,255,.55), rgba(198,227,19,.42), rgba(242,139,29,.38), rgba(185,59,170,.48));
+      background: linear-gradient(135deg,
+        rgba(31,142,224,.85) 0%,
+        rgba(95,196,239,.65) 20%,
+        rgba(194,227,28,.55) 40%,
+        rgba(239,140,34,.5) 60%,
+        rgba(224,64,96,.45) 75%,
+        rgba(168,85,247,.7) 100%);
       -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       -webkit-mask-composite: xor;
       mask-composite: exclude;
       pointer-events: none;
     }
-    .mesh {
-      background-image:
-        radial-gradient(circle at 20% 22%, rgba(36,152,227,.18), transparent 22%),
-        radial-gradient(circle at 72% 30%, rgba(110,199,255,.14), transparent 20%),
-        radial-gradient(circle at 80% 72%, rgba(185,59,170,.16), transparent 22%),
-        radial-gradient(circle at 28% 82%, rgba(198,227,19,.08), transparent 18%);
+
+    /* ---- SPECTRUM BAR ---- */
+    .spectrum-bar {
+      background: linear-gradient(90deg,
+        #1F8EE0 0%, #5FC4EF 18%, #C2E31C 36%, #EF8C22 54%, #E04060 70%, #A855F7 88%, #1F8EE0 100%);
+      background-size: 200% 100%;
+      animation: spectrumShift 6s linear infinite;
     }
-    .text-glow {
-      text-shadow: 0 0 28px rgba(110,199,255,.16);
+    @keyframes spectrumShift {
+      0%   { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+
+    /* ---- GLASS ---- */
+    .glass {
+      backdrop-filter: blur(20px) saturate(1.4);
+      -webkit-backdrop-filter: blur(20px) saturate(1.4);
+      background: rgba(8, 18, 36, 0.72);
+    }
+
+    /* ---- TEXT GLOW ---- */
+    .glow-blue { text-shadow: 0 0 32px rgba(95,196,239,.35); }
+    .glow-lime  { text-shadow: 0 0 24px rgba(194,227,28,.28); }
+
+    /* ---- CARD HOVER ---- */
+    .svc-card {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .svc-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 0 1px rgba(95,196,239,.28), 0 24px 64px rgba(31,142,224,.18);
+    }
+
+    /* ---- NAV LINK ---- */
+    .nav-link {
+      position: relative;
+      color: #8DA3BA;
+      transition: color .2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -4px;
+      height: 1px; width: 0;
+      background: var(--cyan);
+      transition: width .25s;
+    }
+    .nav-link:hover { color: #F1F5F9; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ---- BILINGUAL ---- */
+    [data-lang="id"] { display: none; }
+    body.id [data-lang="en"] { display: none; }
+    body.id [data-lang="id"] { display: block; }
+    body.id span[data-lang="id"] { display: inline; }
+    body.id span[data-lang="en"] { display: none; }
+    span[data-lang="id"] { display: none; }
+
+    /* ---- PULSE DOT ---- */
+    .pulse {
+      animation: pulseDot 2.4s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(194,227,28,.6); }
+      50%       { box-shadow: 0 0 0 7px rgba(194,227,28,.0); }
     }
   </style>
 </head>
-<body class="font-sans text-text antialiased selection:bg-cyan/20">
-  <div class="fixed inset-0 bg-grid bg-[size:52px_52px] opacity-[0.05] pointer-events-none"></div>
-  <div class="relative min-h-screen overflow-hidden bg-hero mesh">
-    <div class="absolute inset-x-0 top-[-120px] mx-auto h-[340px] w-[340px] rounded-full bg-sky-400/10 blur-3xl"></div>
-    <div class="absolute right-[-80px] top-[180px] h-[320px] w-[320px] rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+<body class="font-sans text-text antialiased">
 
-    <header class="sticky top-0 z-50 border-b border-line bg-bg/70 backdrop-blur-2xl">
+  <div class="mesh-bg"></div>
+
+  <div class="relative z-10">
+
+    <!-- NAV -->
+    <header class="fixed top-0 inset-x-0 z-50 border-b border-line glass">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <div class="flex items-center gap-4">
-          <div class="h-11 w-11 rounded-2xl bg-spectrum shadow-neon"></div>
+
+        <!-- LOGO SVG -->
+        <a href="#" class="flex items-center gap-3 select-none">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="36" height="36" rx="10" fill="#07111E"/>
+            <g transform="translate(4,4) scale(0.78)">
+              <!-- Globe petal ring -->
+              <path d="M18 2 A2.4 2.4 0 0 1 21.6 4.4 L18 8.8 L14.4 4.4 A2.4 2.4 0 0 1 18 2Z" fill="#1F8EE0"/>
+              <path d="M26 4.4 A2.4 2.4 0 0 1 29 8 L24.6 10.2 L22.8 5.8 A2.4 2.4 0 0 1 26 4.4Z" fill="#EF8C22"/>
+              <path d="M31.6 11 A2.4 2.4 0 0 1 33 15 L28.4 16 L27.8 11.4 A2.4 2.4 0 0 1 31.6 11Z" fill="#E04060"/>
+              <path d="M31.6 21 A2.4 2.4 0 0 1 29 24.6 L26.2 20.6 L29.8 18.2 A2.4 2.4 0 0 1 31.6 21Z" fill="#A855F7"/>
+              <path d="M26 27.6 A2.4 2.4 0 0 1 22.2 29 L22.4 24.4 L26.8 24 A2.4 2.4 0 0 1 26 27.6Z" fill="#5FC4EF"/>
+              <path d="M18 30 A2.4 2.4 0 0 1 14.4 27.6 L18 23.2 L21.6 27.6 A2.4 2.4 0 0 1 18 30Z" fill="#C2E31C"/>
+              <path d="M10 27.6 A2.4 2.4 0 0 1 7.2 24 L11.6 23.6 L13.6 28 A2.4 2.4 0 0 1 10 27.6Z" fill="#1F8EE0"/>
+              <path d="M4.4 21 A2.4 2.4 0 0 1 6.2 17.4 L9.8 20.4 L7 24.2 A2.4 2.4 0 0 1 4.4 21Z" fill="#EF8C22"/>
+              <path d="M4.4 11 A2.4 2.4 0 0 1 8.2 10 L8.2 14.6 L3.8 15.4 A2.4 2.4 0 0 1 4.4 11Z" fill="#A855F7"/>
+              <path d="M10 4.4 A2.4 2.4 0 0 1 13.8 5.8 L11.8 10.2 L7.4 8 A2.4 2.4 0 0 1 10 4.4Z" fill="#C2E31C"/>
+              <!-- Center circle -->
+              <circle cx="18" cy="16" r="5.2" fill="#07111E" stroke="rgba(255,255,255,.12)" stroke-width=".8"/>
+            </g>
+          </svg>
           <div>
-            <div class="text-sm font-semibold uppercase tracking-[0.28em] text-white">Global Telko</div>
-            <div class="mt-1 text-xs tracking-[0.18em] text-silver">Informatika</div>
+            <div class="text-[13px] font-semibold uppercase tracking-[.26em] text-white leading-none">Global Telko</div>
+            <div class="text-[10px] tracking-[.2em] text-silver mt-[3px] leading-none">Informatika</div>
           </div>
-        </div>
-        <nav class="hidden items-center gap-8 text-sm text-muted md:flex">
-          <a href="#services" class="transition hover:text-white">Services</a>
-          <a href="#why" class="transition hover:text-white">Why us</a>
-          <a href="#roadmap" class="transition hover:text-white">Roadmap</a>
-          <a href="#contact" class="transition hover:text-white">Contact</a>
+        </a>
+
+        <nav class="hidden items-center gap-7 text-sm md:flex">
+          <a href="#services" class="nav-link">
+            <span data-lang="en">Services</span><span data-lang="id">Layanan</span>
+          </a>
+          <a href="#why" class="nav-link">
+            <span data-lang="en">Why us</span><span data-lang="id">Keunggulan</span>
+          </a>
+          <a href="#roadmap" class="nav-link">
+            <span data-lang="en">Roadmap</span><span data-lang="id">Roadmap</span>
+          </a>
+          <a href="#contact" class="nav-link">
+            <span data-lang="en">Contact</span><span data-lang="id">Kontak</span>
+          </a>
+          <!-- LANG TOGGLE -->
+          <button id="langToggle" onclick="document.body.classList.toggle('id'); this.textContent = document.body.classList.contains('id') ? 'EN' : 'ID'" class="rounded-lg border border-line bg-white/5 px-3 py-1 text-xs font-semibold tracking-widest text-silver transition hover:border-cyan/50 hover:text-cyan">ID</button>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
-        <div class="grid gap-14 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
+      <!-- ============ HERO ============ -->
+      <section class="relative mx-auto max-w-7xl px-6 pb-20 pt-32 lg:px-8 lg:pb-28 lg:pt-36">
+
+        <div class="mb-8 flex items-center gap-3">
+          <div class="h-[3px] w-14 spectrum-bar rounded-full"></div>
+          <span class="text-xs font-medium uppercase tracking-[.28em] text-cyan">
+            <span data-lang="en">Bank-grade technology consulting</span>
+            <span data-lang="id">Konsultan teknologi kelas institusional</span>
+          </span>
+          <span class="h-2 w-2 rounded-full bg-lime pulse"></span>
+        </div>
+
+        <div class="grid gap-16 lg:grid-cols-[1.08fr_.92fr] lg:items-center">
           <div>
-            <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.26em] text-cyan shadow-neon">
-              Bank-grade confidence
-              <span class="inline-block h-2 w-2 rounded-full bg-lime"></span>
-            </div>
-            <h1 class="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-white text-glow md:text-7xl xl:text-[5.5rem]">
-              Premium digital presence
-              for institutions that expect
-              more than ordinary IT.
+            <h1 class="text-5xl font-semibold leading-[.95] tracking-[-0.055em] text-white glow-blue md:text-6xl xl:text-[5.25rem]">
+              <span data-lang="en">We build systems<br>that look exclusive,<br><em class="not-italic text-cyan">perform reliably,</em><br>and command trust.</span>
+              <span data-lang="id">Kami membangun sistem<br>yang tampak eksklusif,<br><em class="not-italic text-cyan">beroperasi andal,</em><br>dan memancarkan kepercayaan.</span>
             </h1>
-            <p class="mt-8 max-w-2xl text-lg leading-8 text-muted md:text-xl">
-              We design high-confidence systems, modern infrastructure, and intelligent digital experiences that feel exclusive, operate reliably, and communicate capability the moment they are seen.
+            <p class="mt-8 max-w-xl text-lg leading-8 text-muted">
+              <span data-lang="en">Global Telko Informatika architects high-confidence digital infrastructure, intelligent automation, and modern platforms for organizations where technology must signal capability, not just function.</span>
+              <span data-lang="id">Global Telko Informatika merancang infrastruktur digital berkeandalan tinggi, otomasi cerdas, dan platform modern untuk organisasi yang membutuhkan teknologi yang memancarkan kapabilitas — bukan sekadar berfungsi.</span>
             </p>
-            <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue to-cyan px-6 py-3.5 text-sm font-semibold text-white shadow-neon transition hover:scale-[1.01]">Start a strategic conversation</a>
-              <a href="#services" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">Explore capabilities</a>
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="#contact" class="inline-flex items-center gap-2 rounded-2xl bg-gradient-to-r from-blue to-cyan px-7 py-3.5 text-sm font-semibold text-white transition hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(31,142,224,.35)]">
+                <span data-lang="en">Start a conversation</span>
+                <span data-lang="id">Mulai percakapan</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#services" class="inline-flex items-center gap-2 rounded-2xl border border-line bg-white/[0.04] px-7 py-3.5 text-sm font-semibold text-text transition hover:border-white/20 hover:bg-white/[0.08]">
+                <span data-lang="en">Explore capabilities</span>
+                <span data-lang="id">Lihat kapabilitas</span>
+              </a>
             </div>
-            <div class="mt-12 grid gap-5 md:grid-cols-3">
-              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-                <div class="text-2xl font-semibold text-white">Sharp</div>
-                <p class="mt-2 text-sm leading-6 text-muted">Positioned to feel confident, modern, and executive-facing.</p>
+
+            <!-- STAT BAR -->
+            <div class="mt-14 grid grid-cols-3 gap-4 border-t border-line pt-10">
+              <div>
+                <div class="text-2xl font-semibold text-white glow-lime">AI-Ready</div>
+                <p class="mt-1.5 text-xs leading-5 text-muted">
+                  <span data-lang="en">LLM, automation, edge deployment</span>
+                  <span data-lang="id">LLM, otomasi, edge deployment</span>
+                </p>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-                <div class="text-2xl font-semibold text-white">Reliable</div>
-                <p class="mt-2 text-sm leading-6 text-muted">Designed with trust, operational clarity, and long-term resilience.</p>
+              <div>
+                <div class="text-2xl font-semibold text-white">Multi-sector</div>
+                <p class="mt-1.5 text-xs leading-5 text-muted">
+                  <span data-lang="en">Enterprise, telco, gov, finance</span>
+                  <span data-lang="id">Enterprise, telko, pemerintah, keuangan</span>
+                </p>
               </div>
-              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
-                <div class="text-2xl font-semibold text-white">Distinctive</div>
-                <p class="mt-2 text-sm leading-6 text-muted">A brand surface that looks premium without becoming theatrical.</p>
+              <div>
+                <div class="text-2xl font-semibold text-white">Bilingual</div>
+                <p class="mt-1.5 text-xs leading-5 text-muted">
+                  <span data-lang="en">Indonesian &amp; English delivery</span>
+                  <span data-lang="id">Layanan Bahasa Indonesia &amp; Inggris</span>
+                </p>
               </div>
             </div>
           </div>
 
-          <div class="spectrum-border rounded-[2rem] p-[1px]">
-            <div class="glass rounded-[2rem] p-8 shadow-card">
-              <div class="flex items-start justify-between gap-6">
+          <!-- HERO CARD -->
+          <div class="s-border rounded-[2rem]">
+            <div class="glass rounded-[2rem] p-8 shadow-[0_40px_100px_rgba(3,10,24,.6)]">
+              <div class="flex items-start justify-between">
                 <div>
-                  <p class="text-xs uppercase tracking-[0.24em] text-silver">Brand architecture</p>
-                  <h2 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white">Global energy. Telko precision.</h2>
+                  <p class="text-[11px] uppercase tracking-[.24em] text-silver">
+                    <span data-lang="en">Core identity</span>
+                    <span data-lang="id">Identitas inti</span>
+                  </p>
+                  <h2 class="mt-3 text-2xl font-semibold text-white tracking-tight">
+                    <span data-lang="en">Global energy.<br>Telko precision.</span>
+                    <span data-lang="id">Energi Global.<br>Presisi Telko.</span>
+                  </h2>
                 </div>
-                <div class="mt-1 flex gap-2">
+                <div class="flex gap-[6px] pt-1">
                   <span class="h-3 w-3 rounded-full bg-blue"></span>
                   <span class="h-3 w-3 rounded-full bg-lime"></span>
                   <span class="h-3 w-3 rounded-full bg-orange"></span>
-                  <span class="h-3 w-3 rounded-full bg-magenta"></span>
+                  <span class="h-3 w-3 rounded-full bg-violet"></span>
                 </div>
               </div>
-              <div class="mt-8 grid gap-4">
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                  <div class="text-sm uppercase tracking-[0.18em] text-cyan">Global</div>
-                  <p class="mt-3 text-sm leading-7 text-muted">Expressed through motion, spectrum accents, and outward-looking visual energy that signals expansion and modern capability.</p>
+
+              <div class="mt-7 space-y-4">
+                <div class="rounded-2xl border border-line bg-white/[.035] p-5 transition hover:border-cyan/30">
+                  <div class="flex items-center gap-2">
+                    <span class="h-[5px] w-5 rounded-full" style="background:var(--blue)"></span>
+                    <span class="text-[11px] uppercase tracking-[.22em] text-cyan">Global</span>
+                  </div>
+                  <p class="mt-3 text-sm leading-7 text-muted">
+                    <span data-lang="en">Motion, spectrum, outward energy — a firm that moves with intent and builds for tomorrow's scale.</span>
+                    <span data-lang="id">Gerak, spektrum, energi ekspansif — perusahaan yang bergerak dengan tujuan dan membangun untuk skala masa depan.</span>
+                  </p>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                  <div class="text-sm uppercase tracking-[0.18em] text-silver">Telko</div>
-                  <p class="mt-3 text-sm leading-7 text-muted">Grounded in structure, controlled spacing, disciplined typography, and a measured interface that feels dependable under scrutiny.</p>
+                <div class="rounded-2xl border border-line bg-white/[.035] p-5 transition hover:border-silver/30">
+                  <div class="flex items-center gap-2">
+                    <span class="h-[5px] w-5 rounded-full bg-silver"></span>
+                    <span class="text-[11px] uppercase tracking-[.22em] text-silver">Telko</span>
+                  </div>
+                  <p class="mt-3 text-sm leading-7 text-muted">
+                    <span data-lang="en">Structure, discipline, measured typography — grounded credibility that holds under the toughest scrutiny.</span>
+                    <span data-lang="id">Struktur, disiplin, tipografi terukur — kredibilitas yang solid di bawah pengamatan paling kritis sekalipun.</span>
+                  </p>
                 </div>
-                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-                  <div class="text-sm uppercase tracking-[0.18em] text-white">Result</div>
-                  <p class="mt-3 text-sm leading-7 text-muted">A digital identity that looks futuristic, elegant, and commercially credible without losing seriousness or trust.</p>
+                <div class="rounded-2xl border border-line bg-white/[.035] p-5 transition hover:border-lime/30">
+                  <div class="flex items-center gap-2">
+                    <span class="h-[5px] w-5 rounded-full" style="background:var(--lime)"></span>
+                    <span class="text-[11px] uppercase tracking-[.22em] text-lime">Result</span>
+                  </div>
+                  <p class="mt-3 text-sm leading-7 text-muted">
+                    <span data-lang="en">A consultancy that reads premium, exclusive, and trustworthy before a single word is absorbed.</span>
+                    <span data-lang="id">Konsultan yang terkesan premium, eksklusif, dan dapat dipercaya bahkan sebelum satu kata pun dibaca.</span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -169,158 +353,366 @@
         </div>
       </section>
 
-      <section class="mx-auto max-w-7xl px-6 pb-10 lg:px-8">
-        <div class="grid gap-4 md:grid-cols-4">
-          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-blue/15 to-transparent p-6">
-            <div class="text-xs uppercase tracking-[0.24em] text-cyan">Audience</div>
-            <p class="mt-3 text-lg font-medium text-white">Enterprise, startup, public sector, healthcare, finance, telecom.</p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-lime/10 to-transparent p-6">
-            <div class="text-xs uppercase tracking-[0.24em] text-lime">Mode</div>
-            <p class="mt-3 text-lg font-medium text-white">Tech-forward, high-discipline, solution-oriented consulting.</p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-orange/10 to-transparent p-6">
-            <div class="text-xs uppercase tracking-[0.24em] text-orange">Positioning</div>
-            <p class="mt-3 text-lg font-medium text-white">Exclusive enough to impress, grounded enough to be trusted.</p>
-          </div>
-          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-magenta/10 to-transparent p-6">
-            <div class="text-xs uppercase tracking-[0.24em] text-fuchsia-300">Delivery</div>
-            <p class="mt-3 text-lg font-medium text-white">Bilingual communication with sharp architecture and modern execution.</p>
+      <!-- ============ AUDIENCE BAND ============ -->
+      <section class="border-y border-line bg-white/[.02]">
+        <div class="mx-auto max-w-7xl px-6 py-10 lg:px-8">
+          <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="flex items-start gap-4 rounded-2xl border border-line bg-white/[.03] p-6">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full" style="background:var(--blue)"></span>
+              <div>
+                <div class="text-xs uppercase tracking-[.22em] text-cyan">Enterprise</div>
+                <p class="mt-2 text-sm leading-6 text-muted">
+                  <span data-lang="en">Scale, compliance, reliability. We reduce risk and add precision to complex operations.</span>
+                  <span data-lang="id">Skala, kepatuhan, keandalan. Kami mengurangi risiko dan menambahkan presisi pada operasi kompleks.</span>
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-line bg-white/[.03] p-6">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full" style="background:var(--lime)"></span>
+              <div>
+                <div class="text-xs uppercase tracking-[.22em] text-lime">Startup</div>
+                <p class="mt-2 text-sm leading-6 text-muted">
+                  <span data-lang="en">Built to scale from day one. Architecture that does not become a liability as you grow.</span>
+                  <span data-lang="id">Dirancang scalable dari hari pertama. Arsitektur yang tidak menjadi beban seiring pertumbuhan.</span>
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-line bg-white/[.03] p-6">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full" style="background:var(--orange)"></span>
+              <div>
+                <div class="text-xs uppercase tracking-[.22em] text-orange">Government</div>
+                <p class="mt-2 text-sm leading-6 text-muted">
+                  <span data-lang="en">Trusted by institutions that cannot afford to fail. Discreet, precise, accountable.</span>
+                  <span data-lang="id">Dipercaya oleh institusi yang tidak mampu gagal. Disiplin, presisi, akuntabel.</span>
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 rounded-2xl border border-line bg-white/[.03] p-6">
+              <span class="mt-1 h-2.5 w-2.5 flex-shrink-0 rounded-full" style="background:var(--violet)"></span>
+              <div>
+                <div class="text-xs uppercase tracking-[.22em] text-violet-400">Finance &amp; Telco</div>
+                <p class="mt-2 text-sm leading-6 text-muted">
+                  <span data-lang="en">Where uptime, precision, and regulatory confidence are non-negotiable requirements.</span>
+                  <span data-lang="id">Di mana uptime, presisi, dan kepatuhan regulasi adalah keharusan mutlak.</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
+      <!-- ============ SERVICES ============ -->
       <section id="services" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div class="max-w-3xl">
-          <p class="text-sm uppercase tracking-[0.28em] text-cyan">Capabilities</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Technology structured like a premium service business, not a generic vendor.</h2>
-          <p class="mt-6 text-lg leading-8 text-muted">Every capability is framed to communicate control, precision, and execution maturity. The goal is not to list tools. The goal is to signal that the business knows how to carry responsibility.</p>
+          <div class="mb-4 flex items-center gap-3">
+            <div class="h-px w-8 spectrum-bar"></div>
+            <p class="text-xs uppercase tracking-[.28em] text-cyan">
+              <span data-lang="en">Capabilities</span>
+              <span data-lang="id">Kapabilitas</span>
+            </p>
+          </div>
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
+            <span data-lang="en">Technology treated as a competitive advantage, not a cost center.</span>
+            <span data-lang="id">Teknologi yang diperlakukan sebagai keunggulan kompetitif, bukan sekadar biaya operasional.</span>
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-muted">
+            <span data-lang="en">Every capability is framed around business outcomes, not technical jargon. We help organizations gain control, speed, and clarity across their digital surface.</span>
+            <span data-lang="id">Setiap kapabilitas dirancang di sekitar hasil bisnis, bukan jargon teknis. Kami membantu organisasi mendapatkan kontrol, kecepatan, dan kejelasan di seluruh permukaan digital mereka.</span>
+          </p>
         </div>
 
-        <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-cyan/40 hover:shadow-neon">
-            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue to-cyan"></div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">AI integration</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Private AI deployment, workflow orchestration, model integration, and applied intelligence strategies built around actual operational value.</p>
+        <div class="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+
+          <article class="svc-card rounded-[1.6rem] border border-line bg-white/[.04] p-8">
+            <div class="h-1 w-16 rounded-full" style="background:linear-gradient(90deg,var(--blue),var(--cyan))"></div>
+            <h3 class="mt-6 text-xl font-semibold text-white">
+              <span data-lang="en">AI &amp; Intelligent automation</span>
+              <span data-lang="id">AI &amp; Otomasi cerdas</span>
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-muted">
+              <span data-lang="en">Private AI deployment, workflow orchestration, LLM integration, and applied intelligence built around operational reality — not hype.</span>
+              <span data-lang="id">Deployment AI privat, orkestrasi workflow, integrasi LLM, dan kecerdasan terapan yang dirancang berdasarkan realitas operasional — bukan hype.</span>
+            </p>
           </article>
-          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-lime/40 hover:shadow-neon">
-            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-lime to-cyan"></div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Cloud & DevOps</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Infrastructure, containers, pipelines, observability, and operational foundations that keep systems clean, durable, and scalable.</p>
+
+          <article class="svc-card rounded-[1.6rem] border border-line bg-white/[.04] p-8">
+            <div class="h-1 w-16 rounded-full" style="background:linear-gradient(90deg,var(--lime),#86efac)"></div>
+            <h3 class="mt-6 text-xl font-semibold text-white">
+              <span data-lang="en">Cloud &amp; DevOps</span>
+              <span data-lang="id">Cloud &amp; DevOps</span>
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-muted">
+              <span data-lang="en">Production infrastructure, containers, pipelines, observability, and security hardening that holds under real operational pressure.</span>
+              <span data-lang="id">Infrastruktur produksi, container, pipeline, observability, dan penguatan keamanan yang bertahan di bawah tekanan operasional nyata.</span>
+            </p>
           </article>
-          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-orange/40 hover:shadow-neon">
-            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-orange to-amber-300"></div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Custom platforms</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Internal systems, multi-tenant applications, portals, and digital products designed to support growth without visual or structural compromise.</p>
+
+          <article class="svc-card rounded-[1.6rem] border border-line bg-white/[.04] p-8">
+            <div class="h-1 w-16 rounded-full" style="background:linear-gradient(90deg,var(--orange),#fcd34d)"></div>
+            <h3 class="mt-6 text-xl font-semibold text-white">
+              <span data-lang="en">Custom platforms</span>
+              <span data-lang="id">Platform custom</span>
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-muted">
+              <span data-lang="en">Internal tools, multi-tenant SaaS, portals, and digital products designed with long-term structural integrity, not just rapid delivery.</span>
+              <span data-lang="id">Alat internal, SaaS multi-tenant, portal, dan produk digital yang dirancang dengan integritas struktural jangka panjang, bukan sekadar pengiriman cepat.</span>
+            </p>
           </article>
-          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-fuchsia-400/40 hover:shadow-neon">
-            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-magenta to-fuchsia-300"></div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">System integration</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">APIs, middleware, and service architecture that reduce fragmentation and create cleaner business flows across platforms.</p>
+
+          <article class="svc-card rounded-[1.6rem] border border-line bg-white/[.04] p-8">
+            <div class="h-1 w-16 rounded-full" style="background:linear-gradient(90deg,var(--violet),#c084fc)"></div>
+            <h3 class="mt-6 text-xl font-semibold text-white">
+              <span data-lang="en">System integration</span>
+              <span data-lang="id">Integrasi sistem</span>
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-muted">
+              <span data-lang="en">API architecture, middleware, and cross-platform connections that remove fragmentation and restore clarity to business operations.</span>
+              <span data-lang="id">Arsitektur API, middleware, dan koneksi lintas platform yang menghilangkan fragmentasi dan mengembalikan kejelasan pada operasi bisnis.</span>
+            </p>
           </article>
-          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-cyan/40 hover:shadow-neon">
-            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-cyan to-sky-300"></div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Security posture</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Practical hardening, access design, and trust-aware architecture for organizations that need operational seriousness, not checkbox security.</p>
+
+          <article class="svc-card rounded-[1.6rem] border border-line bg-white/[.04] p-8">
+            <div class="h-1 w-16 rounded-full" style="background:linear-gradient(90deg,var(--rose),var(--orange))"></div>
+            <h3 class="mt-6 text-xl font-semibold text-white">
+              <span data-lang="en">Security &amp; Zero Trust</span>
+              <span data-lang="id">Keamanan &amp; Zero Trust</span>
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-muted">
+              <span data-lang="en">Practical access controls, cloud security posture, and trust-aware architecture for organizations that operate in high-stakes environments.</span>
+              <span data-lang="id">Kontrol akses praktis, postur keamanan cloud, dan arsitektur berbasis kepercayaan untuk organisasi yang beroperasi di lingkungan berisiko tinggi.</span>
+            </p>
           </article>
-          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-blue/40 hover:shadow-neon">
-            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue to-indigo"></div>
-            <h3 class="mt-6 text-2xl font-semibold text-white">Strategic advisory</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Technology direction for leaders who need clarity on what to build, what to avoid, and how to move with confidence.</p>
+
+          <article class="svc-card rounded-[1.6rem] border border-line bg-white/[.04] p-8">
+            <div class="h-1 w-16 rounded-full" style="background:linear-gradient(90deg,var(--cyan),var(--blue))"></div>
+            <h3 class="mt-6 text-xl font-semibold text-white">
+              <span data-lang="en">Technology strategy</span>
+              <span data-lang="id">Strategi teknologi</span>
+            </h3>
+            <p class="mt-4 text-sm leading-7 text-muted">
+              <span data-lang="en">Decision-level clarity for founders and executives who need technology framed as a business asset, not an operational mystery.</span>
+              <span data-lang="id">Kejelasan tingkat keputusan untuk founder dan eksekutif yang membutuhkan teknologi yang dilihat sebagai aset bisnis, bukan misteri operasional.</span>
+            </p>
           </article>
+
         </div>
       </section>
 
-      <section id="why" class="border-y border-white/10 bg-white/[0.02]">
+      <!-- ============ WHY US ============ -->
+      <section id="why" class="border-y border-line bg-white/[.015]">
         <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-            <div>
-              <p class="text-sm uppercase tracking-[0.28em] text-cyan">Why it works</p>
-              <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">The website should already feel like the solution.</h2>
-              <p class="mt-6 text-lg leading-8 text-muted">A serious technology consultancy cannot present itself like a template shop. The interface must project control, responsiveness, and mature taste before the first call ever happens.</p>
+          <div class="grid gap-14 lg:grid-cols-[.95fr_1.05fr]">
+            <div class="max-w-md">
+              <div class="mb-4 flex items-center gap-3">
+                <div class="h-px w-8 spectrum-bar"></div>
+                <p class="text-xs uppercase tracking-[.28em] text-cyan">
+                  <span data-lang="en">Why it matters</span>
+                  <span data-lang="id">Mengapa ini penting</span>
+                </p>
+              </div>
+              <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
+                <span data-lang="en">The interface should already answer the question: can they be trusted?</span>
+                <span data-lang="id">Tampilan antarmuka harus sudah menjawab pertanyaan: dapatkah mereka dipercaya?</span>
+              </h2>
+              <p class="mt-6 text-base leading-8 text-muted">
+                <span data-lang="en">Enterprise buyers and decision-makers do not read every word. They scan for signals: Is this firm controlled? Does it look like it can handle pressure? Does it feel credible at first glance?</span>
+                <span data-lang="id">Pembeli enterprise dan pengambil keputusan tidak membaca setiap kata. Mereka memindai sinyal: Apakah perusahaan ini terkendali? Apakah terlihat mampu menangani tekanan? Apakah terasa kredibel sekilas pandang?</span>
+              </p>
             </div>
-            <div class="grid gap-6 md:grid-cols-2">
-              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-cyan">01</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Commanding first impression</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">A bolder hero, stronger contrast, and richer color language make the company feel more alive, more capable, and more memorable.</p>
+            <div class="grid gap-5 md:grid-cols-2">
+              <div class="rounded-3xl border border-line bg-white/[.035] p-7">
+                <div class="text-4xl font-semibold" style="color:var(--cyan)">01</div>
+                <h3 class="mt-5 text-lg font-semibold text-white">
+                  <span data-lang="en">Immediate trust signal</span>
+                  <span data-lang="id">Sinyal kepercayaan instan</span>
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  <span data-lang="en">Visual confidence is communicated before a single word is read. Controlled aesthetic, precise spacing, intentional color.</span>
+                  <span data-lang="id">Kepercayaan visual dikomunikasikan sebelum satu kata dibaca. Estetika terkontrol, spasi presisi, warna yang disengaja.</span>
+                </p>
               </div>
-              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-lime">02</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Controlled futurism</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">The visual system borrows from modern product brands, but remains disciplined enough for enterprise and institutional buyers.</p>
+              <div class="rounded-3xl border border-line bg-white/[.035] p-7">
+                <div class="text-4xl font-semibold" style="color:var(--lime)">02</div>
+                <h3 class="mt-5 text-lg font-semibold text-white">
+                  <span data-lang="en">Controlled futurism</span>
+                  <span data-lang="id">Futurisme terukur</span>
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  <span data-lang="en">Modern enough to attract forward-looking clients. Disciplined enough to satisfy conservative institutional buyers.</span>
+                  <span data-lang="id">Cukup modern untuk menarik klien visioner. Cukup disiplin untuk memuaskan pembeli institusional yang konservatif.</span>
+                </p>
               </div>
-              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-orange">03</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Multi-sector appeal</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">The messaging is broad enough to support multiple client segments while still feeling premium and intentional.</p>
+              <div class="rounded-3xl border border-line bg-white/[.035] p-7">
+                <div class="text-4xl font-semibold" style="color:var(--orange)">03</div>
+                <h3 class="mt-5 text-lg font-semibold text-white">
+                  <span data-lang="en">Bilingual delivery</span>
+                  <span data-lang="id">Penyampaian bilingual</span>
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  <span data-lang="en">Indonesian-first communication with full English capability. No market is left unreachable.</span>
+                  <span data-lang="id">Komunikasi utama dalam Bahasa Indonesia dengan kemampuan penuh dalam Bahasa Inggris. Tidak ada pasar yang tidak terjangkau.</span>
+                </p>
               </div>
-              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-fuchsia-300">04</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Room to scale</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">This structure can grow into bilingual service pages, future product reveals, and high-trust case studies without redesigning from zero.</p>
+              <div class="rounded-3xl border border-line bg-white/[.035] p-7">
+                <div class="text-4xl font-semibold" style="color:var(--violet)">04</div>
+                <h3 class="mt-5 text-lg font-semibold text-white">
+                  <span data-lang="en">Scalable presence</span>
+                  <span data-lang="id">Kehadiran yang scalable</span>
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  <span data-lang="en">This foundation evolves into product pages, case studies, and sector-specific content as the business grows.</span>
+                  <span data-lang="id">Fondasi ini berkembang menjadi halaman produk, studi kasus, dan konten spesifik sektor seiring pertumbuhan bisnis.</span>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ============ ROADMAP ============ -->
       <section id="roadmap" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div class="max-w-3xl">
-          <p class="text-sm uppercase tracking-[0.28em] text-cyan">Roadmap</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Internal capability now. Selective visibility later.</h2>
-          <p class="mt-6 text-lg leading-8 text-muted">The public brand should stay sharp and credible. Internal initiatives can remain undisclosed today, then surface in curated form once they strengthen the company narrative rather than distract from it.</p>
+          <div class="mb-4 flex items-center gap-3">
+            <div class="h-px w-8 spectrum-bar"></div>
+            <p class="text-xs uppercase tracking-[.28em] text-cyan">
+              <span data-lang="en">Roadmap</span>
+              <span data-lang="id">Roadmap</span>
+            </p>
+          </div>
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
+            <span data-lang="en">Capability built intentionally. Revealed strategically.</span>
+            <span data-lang="id">Kapabilitas dibangun dengan niat. Diungkap secara strategis.</span>
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-muted">
+            <span data-lang="en">Internal initiatives remain internal until they strengthen the brand narrative. This roadmap signals forward motion without overexposing unfinished assets.</span>
+            <span data-lang="id">Inisiatif internal tetap internal hingga memperkuat narasi merek. Roadmap ini menandakan kemajuan ke depan tanpa mengekspos aset yang belum selesai.</span>
+          </p>
         </div>
 
-        <div class="mt-14 grid gap-6 lg:grid-cols-3">
-          <div class="spectrum-border rounded-[1.7rem] p-[1px]">
-            <div class="rounded-[1.7rem] bg-white/[0.04] p-8">
-              <div class="text-xs uppercase tracking-[0.22em] text-silver">Phase 01</div>
-              <h3 class="mt-4 text-2xl font-semibold text-white">Company profile excellence</h3>
-              <p class="mt-4 text-sm leading-7 text-muted">Establish a premium bilingual presence with strong trust signals, polished structure, and executive-grade presentation.</p>
+        <div class="relative mt-14">
+          <div class="absolute left-0 top-6 hidden h-[1px] w-full spectrum-bar opacity-30 lg:block"></div>
+          <div class="grid gap-6 lg:grid-cols-3">
+            <div class="s-border rounded-[1.6rem] bg-white/[.04] p-8">
+              <div class="text-xs uppercase tracking-[.22em] text-silver mb-4">
+                <span data-lang="en">Phase 01 · Active</span>
+                <span data-lang="id">Fase 01 · Aktif</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white">
+                <span data-lang="en">Company presence</span>
+                <span data-lang="id">Kehadiran perusahaan</span>
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-muted">
+                <span data-lang="en">Premium bilingual digital profile, trust-first architecture, executive-grade first impression.</span>
+                <span data-lang="id">Profil digital bilingual premium, arsitektur berbasis kepercayaan, kesan pertama berkelas eksekutif.</span>
+              </p>
+              <div class="mt-6 flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-lime pulse"></span>
+                <span class="text-xs text-lime uppercase tracking-[.2em]">
+                  <span data-lang="en">Live</span>
+                  <span data-lang="id">Aktif</span>
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="spectrum-border rounded-[1.7rem] p-[1px]">
-            <div class="rounded-[1.7rem] bg-white/[0.04] p-8">
-              <div class="text-xs uppercase tracking-[0.22em] text-silver">Phase 02</div>
-              <h3 class="mt-4 text-2xl font-semibold text-white">Roadmap visibility</h3>
-              <p class="mt-4 text-sm leading-7 text-muted">Reveal selected coming-soon initiatives with clean positioning, controlled disclosure, and stronger market signaling.</p>
+            <div class="rounded-[1.6rem] border border-line bg-white/[.025] p-8">
+              <div class="text-xs uppercase tracking-[.22em] text-silver mb-4">
+                <span data-lang="en">Phase 02 · Soon</span>
+                <span data-lang="id">Fase 02 · Segera</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white">
+                <span data-lang="en">Product visibility</span>
+                <span data-lang="id">Visibilitas produk</span>
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-muted">
+                <span data-lang="en">Controlled release of internal product roadmaps with strategic positioning and clean commercial framing.</span>
+                <span data-lang="id">Perilisan terkontrol roadmap produk internal dengan positioning strategis dan framing komersial yang bersih.</span>
+              </p>
+              <div class="mt-6 flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-orange"></span>
+                <span class="text-xs text-orange uppercase tracking-[.2em]">
+                  <span data-lang="en">Upcoming</span>
+                  <span data-lang="id">Mendatang</span>
+                </span>
+              </div>
             </div>
-          </div>
-          <div class="spectrum-border rounded-[1.7rem] p-[1px]">
-            <div class="rounded-[1.7rem] bg-white/[0.04] p-8">
-              <div class="text-xs uppercase tracking-[0.22em] text-silver">Phase 03</div>
-              <h3 class="mt-4 text-2xl font-semibold text-white">Authority expansion</h3>
-              <p class="mt-4 text-sm leading-7 text-muted">Add strategic insights, sector pages, deeper proof layers, and stronger commercial storytelling once disclosure becomes useful.</p>
+            <div class="rounded-[1.6rem] border border-line bg-white/[.02] p-8">
+              <div class="text-xs uppercase tracking-[.22em] text-silver mb-4">
+                <span data-lang="en">Phase 03 · Planned</span>
+                <span data-lang="id">Fase 03 · Direncanakan</span>
+              </div>
+              <h3 class="text-xl font-semibold text-white">
+                <span data-lang="en">Authority layer</span>
+                <span data-lang="id">Lapisan otoritas</span>
+              </h3>
+              <p class="mt-4 text-sm leading-7 text-muted">
+                <span data-lang="en">Case studies, sector pages, strategic insights, and deeper proof structures that compound credibility over time.</span>
+                <span data-lang="id">Studi kasus, halaman sektor, wawasan strategis, dan struktur bukti yang lebih dalam yang mengkompound kredibilitas seiring waktu.</span>
+              </p>
+              <div class="mt-6 flex items-center gap-2">
+                <span class="h-2 w-2 rounded-full bg-violet"></span>
+                <span class="text-xs text-violet-400 uppercase tracking-[.2em]">
+                  <span data-lang="en">Planned</span>
+                  <span data-lang="id">Direncanakan</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      <!-- ============ CONTACT ============ -->
       <section id="contact" class="pb-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="spectrum-border rounded-[2rem] p-[1px]">
-            <div class="rounded-[2rem] bg-gradient-to-b from-white/[0.05] to-white/[0.025] p-8 md:p-12">
-              <div class="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+          <div class="s-border rounded-[2rem]">
+            <div class="glass rounded-[2rem] p-8 md:p-14">
+              <div class="grid gap-12 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
                 <div>
-                  <p class="text-sm uppercase tracking-[0.28em] text-cyan">Contact</p>
-                  <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">A sharper technology partner starts with a sharper first conversation.</h2>
-                  <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">For organizations seeking a confident, premium, and execution-driven technology consulting partner, contact us directly. We communicate in Indonesian and English.</p>
+                  <div class="mb-4 flex items-center gap-3">
+                    <div class="h-px w-8 spectrum-bar"></div>
+                    <p class="text-xs uppercase tracking-[.28em] text-cyan">
+                      <span data-lang="en">Contact</span>
+                      <span data-lang="id">Kontak</span>
+                    </p>
+                  </div>
+                  <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
+                    <span data-lang="en">A sharper technology partner starts with a sharper first conversation.</span>
+                    <span data-lang="id">Mitra teknologi yang lebih tajam dimulai dari percakapan pertama yang lebih tajam.</span>
+                  </h2>
+                  <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">
+                    <span data-lang="en">For organizations seeking a confident, premium, and execution-driven technology partner — reach out. We respond in Indonesian and English with equal clarity.</span>
+                    <span data-lang="id">Untuk organisasi yang mencari mitra teknologi yang percaya diri, premium, dan berorientasi eksekusi — hubungi kami. Kami merespons dalam Bahasa Indonesia dan Inggris dengan kejelasan yang sama.</span>
+                  </p>
                 </div>
-                <div class="rounded-[1.7rem] border border-white/10 bg-bg/60 p-8 shadow-card">
-                  <div class="space-y-6">
+                <div class="rounded-2xl border border-line bg-bg/80 p-8 shadow-[0_30px_80px_rgba(3,10,24,.5)]">
+                  <div class="space-y-7">
                     <div>
-                      <div class="text-xs uppercase tracking-[0.2em] text-silver">Email</div>
+                      <div class="text-[11px] uppercase tracking-[.24em] text-silver">
+                        <span data-lang="en">Email</span>
+                        <span data-lang="id">Email</span>
+                      </div>
                       <a href="mailto:halo@globaltelko.com" class="mt-2 inline-block text-xl font-semibold text-white transition hover:text-cyan">halo@globaltelko.com</a>
                     </div>
                     <div>
-                      <div class="text-xs uppercase tracking-[0.2em] text-silver">Phone / WhatsApp</div>
+                      <div class="text-[11px] uppercase tracking-[.24em] text-silver">
+                        <span data-lang="en">Phone / WhatsApp</span>
+                        <span data-lang="id">Telepon / WhatsApp</span>
+                      </div>
                       <a href="https://wa.me/6281524083899" class="mt-2 inline-block text-xl font-semibold text-white transition hover:text-cyan">0815-2408-3899</a>
                     </div>
                     <div>
-                      <div class="text-xs uppercase tracking-[0.2em] text-silver">Language</div>
-                      <p class="mt-2 text-sm leading-7 text-muted">Bilingual communication for local and international business contexts.</p>
+                      <div class="text-[11px] uppercase tracking-[.24em] text-silver">
+                        <span data-lang="en">Languages</span>
+                        <span data-lang="id">Bahasa</span>
+                      </div>
+                      <p class="mt-2 text-sm leading-6 text-muted">
+                        <span data-lang="en">Indonesian &amp; English</span>
+                        <span data-lang="id">Bahasa Indonesia &amp; Inggris</span>
+                      </p>
                     </div>
+                    <a href="mailto:halo@globaltelko.com" class="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue to-cyan py-3.5 text-sm font-semibold text-white transition hover:scale-[1.01] hover:shadow-[0_0_40px_rgba(31,142,224,.3)]">
+                      <span data-lang="en">Send us a message</span>
+                      <span data-lang="id">Kirim pesan</span>
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -330,12 +722,19 @@
       </section>
     </main>
 
-    <footer class="border-t border-white/10">
-      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-muted lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <p>© 2026 Global Telko Informatika. All rights reserved.</p>
-        <p>Confident. Sharp. Responsible.</p>
+    <footer class="border-t border-line">
+      <div class="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 py-10 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div class="flex items-center gap-3">
+          <div class="h-1 w-10 spectrum-bar rounded-full"></div>
+          <span class="text-xs text-muted">© 2026 Global Telko Informatika.</span>
+        </div>
+        <p class="text-xs text-muted">
+          <span data-lang="en">Confident. Sharp. Responsible.</span>
+          <span data-lang="id">Percaya Diri. Tajam. Bertanggung Jawab.</span>
+        </p>
       </div>
     </footer>
+
   </div>
 </body>
 </html>
