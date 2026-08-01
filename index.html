@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Telko Informatika — Technology Consulting</title>
-  <meta name="description" content="High-confidence technology consulting. AI integration, cloud infrastructure, and digital systems engineered for organisations that cannot afford to fail." />
-  <meta name="theme-color" content="#05080F" />
+  <title>Global Telko Informatika — End-to-End Technology Consulting</title>
+  <meta name="description" content="One partner for AI, cloud, platform engineering, security, and digital strategy. Built for organisations where technology must perform without compromise." />
+  <meta name="theme-color" content="#04070E" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            bg:     '#05080F',
-            surface:'#0C1220',
-            line:   'rgba(255,255,255,0.07)',
-            text:   '#EEF2F7',
-            muted:  '#7A8FA6',
-            dim:    '#4A5D72',
-            blue:   '#2B7FE0',
-            blueSoft:'rgba(43,127,224,0.14)'
+            bg:      '#04070E',
+            surface: '#0A1120',
+            line:    'rgba(255,255,255,0.07)',
+            text:    '#EDF2F7',
+            muted:   '#7B8EA6',
+            dim:     '#475C72',
+            blue:    '#2B80E0',
+            bsoft:   'rgba(43,128,224,0.12)'
           },
           fontFamily: {
             sans: ['Inter','ui-sans-serif','system-ui','sans-serif']
@@ -36,484 +36,547 @@
     html { color-scheme: dark; }
 
     body {
-      background: #05080F;
-      background-image:
-        radial-gradient(ellipse 70% 50% at 50% -10%, rgba(43,127,224,.13), transparent);
+      background: #04070E;
+      background-image: radial-gradient(ellipse 80% 45% at 50% -5%, rgba(43,128,224,.11), transparent);
     }
 
     .glass {
-      backdrop-filter: blur(16px) saturate(1.3);
-      -webkit-backdrop-filter: blur(16px) saturate(1.3);
-      background: rgba(5, 8, 15, 0.82);
+      backdrop-filter: blur(18px) saturate(1.3);
+      -webkit-backdrop-filter: blur(18px) saturate(1.3);
+      background: rgba(4,7,14,.85);
     }
 
-    /* subtle grid */
     .dot-grid {
-      background-image: radial-gradient(rgba(255,255,255,.055) 1px, transparent 1px);
-      background-size: 28px 28px;
+      background-image: radial-gradient(rgba(255,255,255,.05) 1px, transparent 1px);
+      background-size: 26px 26px;
     }
 
-    /* fade in on scroll */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity .55s ease, transform .55s ease;
-    }
-    .fade-up.visible {
-      opacity: 1;
-      transform: none;
-    }
+    .rule { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.09), transparent); }
 
-    /* nav link underline */
-    .nav-link {
-      position: relative;
-      color: #7A8FA6;
-      font-size: .875rem;
-      transition: color .18s;
-    }
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0; bottom: -2px;
-      height: 1px; width: 0;
-      background: #2B7FE0;
-      transition: width .22s ease;
-    }
-    .nav-link:hover { color: #EEF2F7; }
-    .nav-link:hover::after { width: 100%; }
+    /* fade in */
+    .fu { opacity:0; transform:translateY(20px); transition:opacity .5s ease, transform .5s ease; }
+    .fu.on { opacity:1; transform:none; }
+
+    /* nav link */
+    .nl { position:relative; color:#7B8EA6; font-size:.875rem; transition:color .18s; }
+    .nl::after { content:''; position:absolute; left:0; bottom:-2px; height:1px; width:0; background:#2B80E0; transition:width .2s; }
+    .nl:hover { color:#EDF2F7; }
+    .nl:hover::after { width:100%; }
 
     /* service card */
-    .svc {
+    .sc {
       border: 1px solid rgba(255,255,255,.07);
-      border-radius: 20px;
-      padding: 2rem;
-      background: rgba(12,18,32,.6);
-      transition: border-color .2s, transform .22s, box-shadow .22s;
+      border-radius: 18px;
+      padding: 1.75rem;
+      background: rgba(10,17,32,.55);
+      transition: border-color .2s, transform .2s, box-shadow .2s;
     }
-    .svc:hover {
-      border-color: rgba(43,127,224,.35);
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(43,127,224,.12);
+    .sc:hover {
+      border-color: rgba(43,128,224,.38);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(43,128,224,.11);
+    }
+
+    /* number badge */
+    .nb {
+      display:inline-flex; align-items:center; justify-content:center;
+      width:2rem; height:2rem; border-radius:8px;
+      border:1px solid rgba(43,128,224,.3); background:rgba(43,128,224,.1);
+      font-size:.7rem; font-weight:700; color:#2B80E0; letter-spacing:.05em;
     }
 
     /* bilingual */
-    [data-lang="id"]        { display: none; }
-    body.id [data-lang="en"]{ display: none; }
-    body.id [data-lang="id"]{ display: block; }
-    body.id span[data-lang="id"] { display: inline; }
-    body.id span[data-lang="en"] { display: none; }
-    span[data-lang="id"]    { display: none; }
+    [data-lang="id"]            { display: none; }
+    body.id [data-lang="en"]    { display: none; }
+    body.id [data-lang="id"]    { display: block; }
+    body.id span[data-lang="id"]{ display: inline; }
+    body.id span[data-lang="en"]{ display: none; }
+    span[data-lang="id"]        { display: none; }
 
     /* pulse */
-    @keyframes pulse-ring {
-      0%,100% { box-shadow: 0 0 0 0 rgba(43,224,120,.55); }
-      50%      { box-shadow: 0 0 0 6px rgba(43,224,120,0); }
+    @keyframes pr {
+      0%,100%{ box-shadow:0 0 0 0 rgba(52,211,153,.55); }
+      50%    { box-shadow:0 0 0 6px rgba(52,211,153,0); }
     }
-    .pulse { animation: pulse-ring 2.6s ease-in-out infinite; }
+    .pulse{ animation:pr 2.6s ease-in-out infinite; }
 
-    /* divider line */
-    .rule { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent); }
+    /* stat number */
+    .stat-n { font-size:2.5rem; font-weight:700; color:#fff; letter-spacing:-.04em; line-height:1; }
+
+    /* process step connector */
+    .step-line::before {
+      content:'';
+      position:absolute; left:15px; top:2.25rem;
+      width:1px; height:calc(100% + 1.5rem);
+      background:linear-gradient(to bottom, rgba(43,128,224,.3), transparent);
+    }
   </style>
 </head>
 <body class="font-sans text-text antialiased">
 
-  <!-- dot background -->
-  <div class="dot-grid fixed inset-0 z-0 pointer-events-none opacity-40"></div>
-
+  <div class="dot-grid fixed inset-0 z-0 pointer-events-none opacity-35"></div>
   <div class="relative z-10">
 
-    <!-- ======= HEADER ======= -->
+    <!-- NAV -->
     <header class="fixed inset-x-0 top-0 z-50 border-b border-line glass">
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-
-        <!-- REAL LOGO -->
         <a href="#" class="flex items-center gap-3 select-none">
-          <img
-            src="https://raw.githubusercontent.com/Aldhie/globaltelko-web/main/Logo%20copy%204.png"
-            alt="Global Telko Informatika"
-            class="h-9 w-auto object-contain"
-          />
+          <img src="https://raw.githubusercontent.com/Aldhie/globaltelko-web/main/Logo%20copy%204.png"
+               alt="Global Telko Informatika" class="h-9 w-auto object-contain" />
         </a>
-
         <nav class="hidden items-center gap-7 md:flex">
-          <a href="#services" class="nav-link"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a>
-          <a href="#why"      class="nav-link"><span data-lang="en">Why us</span><span data-lang="id">Keunggulan</span></a>
-          <a href="#roadmap" class="nav-link">Roadmap</a>
-          <a href="#contact"  class="nav-link"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a>
-          <button
-            id="langBtn"
-            onclick="document.body.classList.toggle('id'); this.textContent = document.body.classList.contains('id') ? 'EN' : 'ID'"
-            class="rounded-lg border border-line bg-white/[.04] px-3 py-1 text-xs font-semibold uppercase tracking-widest text-muted transition hover:border-blue/50 hover:text-text"
-          >ID</button>
+          <a href="#services" class="nl"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a>
+          <a href="#approach" class="nl"><span data-lang="en">Approach</span><span data-lang="id">Pendekatan</span></a>
+          <a href="#why"      class="nl"><span data-lang="en">Why us</span><span data-lang="id">Keunggulan</span></a>
+          <a href="#contact"  class="nl"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a>
+          <button onclick="document.body.classList.toggle('id');this.textContent=document.body.classList.contains('id')?'EN':'ID'"
+            class="rounded-lg border border-line bg-white/[.04] px-3 py-1.5 text-xs font-semibold uppercase tracking-widest text-muted transition hover:border-blue/50 hover:text-text">ID
+          </button>
         </nav>
       </div>
     </header>
 
     <main>
 
-      <!-- ======= HERO ======= -->
-      <section class="mx-auto max-w-6xl px-6 pb-24 pt-36">
+      <!-- ===== HERO ===== -->
+      <section class="mx-auto max-w-6xl px-6 pb-20 pt-36">
 
-        <div class="mb-8 inline-flex items-center gap-2.5 rounded-full border border-line bg-blueSoft px-4 py-2 fade-up">
-          <span class="h-2 w-2 rounded-full bg-emerald-400 pulse"></span>
-          <span class="text-xs font-medium uppercase tracking-[.25em] text-blue">
-            <span data-lang="en">Technology consulting · Bogor, Indonesia</span>
-            <span data-lang="id">Konsultan teknologi · Bogor, Indonesia</span>
+        <div class="mb-7 inline-flex items-center gap-2.5 rounded-full border border-bsoft bg-bsoft px-4 py-2 fu">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 pulse"></span>
+          <span class="text-xs font-semibold uppercase tracking-[.24em] text-blue">
+            <span data-lang="en">End-to-end technology consulting</span>
+            <span data-lang="id">Konsultan teknologi end-to-end</span>
           </span>
         </div>
 
-        <h1 class="mt-6 max-w-5xl text-5xl font-semibold leading-[1.01] tracking-[-0.05em] text-white fade-up md:text-6xl xl:text-[4.75rem]">
-          <span data-lang="en">We engineer digital systems that organisations actually trust.</span>
-          <span data-lang="id">Kami merancang sistem digital yang benar-benar dipercaya organisasi.</span>
+        <h1 class="mt-4 max-w-5xl text-5xl font-semibold leading-[1.02] tracking-[-0.052em] text-white fu md:text-6xl xl:text-[4.6rem]">
+          <span data-lang="en">One partner.<br class="hidden md:block"> Every layer of your technology.</span>
+          <span data-lang="id">Satu mitra.<br class="hidden md:block"> Setiap lapisan teknologi Anda.</span>
         </h1>
 
-        <p class="mt-8 max-w-2xl text-xl leading-9 text-muted fade-up">
-          <span data-lang="en">Global Telko Informatika delivers AI integration, cloud infrastructure, and modern platforms for enterprises, government, and institutions where failure is not an option.</span>
-          <span data-lang="id">Global Telko Informatika menghadirkan integrasi AI, infrastruktur cloud, dan platform modern untuk enterprise, pemerintah, dan institusi di mana kegagalan bukan pilihan.</span>
+        <p class="mt-7 max-w-2xl text-xl leading-9 text-muted fu">
+          <span data-lang="en">From AI and cloud infrastructure to system integration, security, and digital strategy — Global Telko Informatika delivers the full stack of modern technology consulting. One relationship. No gaps. No handoffs to unknown subcontractors.</span>
+          <span data-lang="id">Dari AI dan infrastruktur cloud hingga integrasi sistem, keamanan, dan strategi digital — Global Telko Informatika menghadirkan full stack konsultasi teknologi modern. Satu hubungan. Tanpa celah. Tanpa serah terima ke subkontraktor yang tidak dikenal.</span>
         </p>
 
-        <div class="mt-10 flex flex-wrap items-center gap-4 fade-up">
+        <div class="mt-9 flex flex-wrap items-center gap-4 fu">
           <a href="#contact"
-             class="inline-flex items-center gap-2 rounded-xl bg-blue px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#3A8FEF] hover:shadow-[0_0_32px_rgba(43,127,224,.35)]">
-            <span data-lang="en">Start a conversation</span>
-            <span data-lang="id">Mulai percakapan</span>
-            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+             class="inline-flex items-center gap-2 rounded-xl bg-blue px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#3D8FEF] hover:shadow-[0_0_36px_rgba(43,128,224,.32)]">
+            <span data-lang="en">Talk to us</span>
+            <span data-lang="id">Hubungi kami</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a href="#services"
-             class="inline-flex items-center gap-2 rounded-xl border border-line bg-white/[.04] px-6 py-3 text-sm font-semibold text-text transition hover:bg-white/[.08] hover:border-white/20">
-            <span data-lang="en">Explore capabilities</span>
-            <span data-lang="id">Lihat kapabilitas</span>
+             class="inline-flex items-center gap-2 rounded-xl border border-line bg-white/[.04] px-6 py-3.5 text-sm font-semibold text-text transition hover:bg-white/[.08] hover:border-white/20">
+            <span data-lang="en">See all capabilities</span>
+            <span data-lang="id">Lihat semua kapabilitas</span>
           </a>
         </div>
 
-        <!-- PROOF ROW -->
-        <div class="mt-20 rule"></div>
-        <div class="mt-10 grid grid-cols-2 gap-6 md:grid-cols-4 fade-up">
+        <!-- SOCIAL PROOF STATS -->
+        <div class="mt-20 grid grid-cols-2 gap-x-8 gap-y-10 border-t border-line pt-14 sm:grid-cols-4 fu">
           <div>
-            <div class="text-2xl font-semibold text-white">AI-Native</div>
-            <p class="mt-1.5 text-sm text-muted"><span data-lang="en">LLM, automation, edge</span><span data-lang="id">LLM, otomasi, edge</span></p>
+            <div class="stat-n">6+</div>
+            <p class="mt-2 text-sm text-muted">
+              <span data-lang="en">Core service domains</span>
+              <span data-lang="id">Domain layanan inti</span>
+            </p>
           </div>
           <div>
-            <div class="text-2xl font-semibold text-white">Multi-sector</div>
-            <p class="mt-1.5 text-sm text-muted"><span data-lang="en">Enterprise to Gov</span><span data-lang="id">Enterprise hingga Pemerintah</span></p>
+            <div class="stat-n">AI</div>
+            <p class="mt-2 text-sm text-muted">
+              <span data-lang="en">Native capability, not outsourced</span>
+              <span data-lang="id">Kapabilitas sendiri, bukan outsource</span>
+            </p>
           </div>
           <div>
-            <div class="text-2xl font-semibold text-white">Bank-grade</div>
-            <p class="mt-1.5 text-sm text-muted"><span data-lang="en">Reliability by design</span><span data-lang="id">Keandalan by design</span></p>
+            <div class="stat-n">ID+EN</div>
+            <p class="mt-2 text-sm text-muted">
+              <span data-lang="en">Full bilingual delivery</span>
+              <span data-lang="id">Layanan bilingual penuh</span>
+            </p>
           </div>
           <div>
-            <div class="text-2xl font-semibold text-white">Bilingual</div>
-            <p class="mt-1.5 text-sm text-muted"><span data-lang="en">ID &amp; EN delivery</span><span data-lang="id">Layanan ID &amp; EN</span></p>
+            <div class="stat-n">24/7</div>
+            <p class="mt-2 text-sm text-muted">
+              <span data-lang="en">Production-grade commitment</span>
+              <span data-lang="id">Komitmen kelas produksi</span>
+            </p>
           </div>
         </div>
       </section>
 
-      <div class="rule mx-auto max-w-6xl px-6"></div>
+      <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ======= SERVICES ======= -->
+      <!-- ===== SERVICES ===== -->
       <section id="services" class="mx-auto max-w-6xl px-6 py-24">
 
-        <div class="mb-14 fade-up">
-          <p class="text-xs font-medium uppercase tracking-[.28em] text-blue mb-3">
-            <span data-lang="en">Capabilities</span><span data-lang="id">Kapabilitas</span>
+        <div class="mb-4 fu">
+          <p class="text-xs font-semibold uppercase tracking-[.28em] text-blue">
+            <span data-lang="en">Full-spectrum capabilities</span>
+            <span data-lang="id">Kapabilitas full-spectrum</span>
           </p>
-          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl max-w-3xl">
-            <span data-lang="en">Technology structured around what your business actually needs.</span>
-            <span data-lang="id">Teknologi yang distrukturisasi sesuai kebutuhan nyata bisnis Anda.</span>
+        </div>
+        <div class="mb-14 grid gap-4 lg:grid-cols-2 fu">
+          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
+            <span data-lang="en">Everything your organisation needs. Under one roof.</span>
+            <span data-lang="id">Semua yang dibutuhkan organisasi Anda. Di satu tempat.</span>
           </h2>
+          <p class="text-base leading-8 text-muted lg:pt-3">
+            <span data-lang="en">We do not refer you out. Every capability listed here is delivered directly by our team — designed, built, and maintained with the same standard of care. This is what end-to-end ownership looks like in practice.</span>
+            <span data-lang="id">Kami tidak merujuk Anda ke pihak lain. Setiap kapabilitas yang tercantum di sini disampaikan langsung oleh tim kami — dirancang, dibangun, dan dipelihara dengan standar yang sama. Inilah wujud kepemilikan end-to-end dalam praktik.</span>
+          </p>
         </div>
 
-        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-          <div class="svc fade-up">
-            <div class="mb-5 text-blue">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="2" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="12" y="2" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><rect x="2" y="12" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M16 12v8M12 16h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white">
-              <span data-lang="en">AI &amp; Intelligent automation</span>
-              <span data-lang="id">AI &amp; Otomasi cerdas</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Private AI deployment, LLM integration, workflow orchestration, and applied automation that creates real operational leverage.</span>
-              <span data-lang="id">Deployment AI privat, integrasi LLM, orkestrasi workflow, dan otomasi terapan yang menciptakan leverage operasional nyata.</span>
-            </p>
-          </div>
+        <div class="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
 
-          <div class="svc fade-up">
-            <div class="mb-5 text-blue">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8-8-3.582-8-8Z" stroke="currentColor" stroke-width="1.6"/><path d="M3 11h16M11 3c-2 2.5-3 5-3 8s1 5.5 3 8M11 3c2 2.5 3 5 3 8s-1 5.5-3 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white">
-              <span data-lang="en">Cloud &amp; DevOps</span>
-              <span data-lang="id">Cloud &amp; DevOps</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Infrastructure design, containers, CI/CD pipelines, observability, and security hardening built for production environments that need to stay up.</span>
-              <span data-lang="id">Desain infrastruktur, container, pipeline CI/CD, observability, dan penguatan keamanan untuk lingkungan produksi yang harus tetap berjalan.</span>
-            </p>
-          </div>
-
-          <div class="svc fade-up">
-            <div class="mb-5 text-blue">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="2" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M7 2v3M15 2v3M2 9h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white">
-              <span data-lang="en">Custom platforms</span>
-              <span data-lang="id">Platform custom</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Full-stack applications, multi-tenant SaaS, internal systems, and portals engineered with structural integrity and long-term maintainability.</span>
-              <span data-lang="id">Aplikasi full-stack, SaaS multi-tenant, sistem internal, dan portal yang dirancang dengan integritas struktural dan maintainability jangka panjang.</span>
-            </p>
-          </div>
-
-          <div class="svc fade-up">
-            <div class="mb-5 text-blue">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M4 11h14M4 6h14M4 16h8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white">
-              <span data-lang="en">System integration</span>
-              <span data-lang="id">Integrasi sistem</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">API architecture, middleware, and cross-platform connections that remove fragmentation and restore operational clarity across your stack.</span>
-              <span data-lang="id">Arsitektur API, middleware, dan koneksi lintas platform yang menghilangkan fragmentasi dan mengembalikan kejelasan operasional.</span>
-            </p>
-          </div>
-
-          <div class="svc fade-up">
-            <div class="mb-5 text-blue">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2l2.4 6.8H20l-5.7 4.2 2.2 6.8L11 15.8l-5.5 4 2.2-6.8L2 8.8h6.6L11 2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white">
-              <span data-lang="en">Security &amp; Zero Trust</span>
-              <span data-lang="id">Keamanan &amp; Zero Trust</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Access design, cloud security posture, and practical hardening for organisations where a security incident carries real institutional cost.</span>
-              <span data-lang="id">Desain akses, postur keamanan cloud, dan penguatan praktis untuk organisasi di mana insiden keamanan membawa biaya institusional nyata.</span>
-            </p>
-          </div>
-
-          <div class="svc fade-up">
-            <div class="mb-5 text-blue">
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 2v4M11 16v4M4.22 4.22l2.83 2.83M14.95 14.95l2.83 2.83M2 11h4M16 11h4M4.22 17.78l2.83-2.83M14.95 7.05l2.83-2.83" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </div>
-            <h3 class="text-lg font-semibold text-white">
-              <span data-lang="en">Technology strategy</span>
-              <span data-lang="id">Strategi teknologi</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Advisory for founders and executives who need technology framed as a business lever, with honest directional guidance and no agenda to oversell.</span>
-              <span data-lang="id">Konsultasi untuk founder dan eksekutif yang membutuhkan teknologi sebagai leverage bisnis, dengan panduan arah yang jujur dan tidak ada agenda overselling.</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div class="rule mx-auto max-w-6xl px-6"></div>
-
-      <!-- ======= WHY US ======= -->
-      <section id="why" class="mx-auto max-w-6xl px-6 py-24">
-        <div class="grid gap-16 lg:grid-cols-2 lg:items-start">
-          <div class="fade-up">
-            <p class="text-xs font-medium uppercase tracking-[.28em] text-blue mb-3">
-              <span data-lang="en">Why it works</span><span data-lang="id">Mengapa berhasil</span>
-            </p>
-            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
-              <span data-lang="en">A serious consultancy should feel serious before the first meeting.</span>
-              <span data-lang="id">Konsultan serius harus terasa serius bahkan sebelum pertemuan pertama.</span>
-            </h2>
-            <p class="mt-6 text-base leading-8 text-muted">
-              <span data-lang="en">Enterprise decision-makers scan for signals of competence and control. The interface, the language, and the structure of this presence are all designed to answer one question before it is asked: can this firm be trusted with something that matters?</span>
-              <span data-lang="id">Pengambil keputusan enterprise memindai sinyal kompetensi dan kontrol. Antarmuka, bahasa, dan struktur kehadiran ini dirancang untuk menjawab satu pertanyaan sebelum ditanyakan: dapatkah firma ini dipercaya dengan sesuatu yang penting?</span>
-            </p>
-          </div>
-
-          <div class="grid gap-5 sm:grid-cols-2 fade-up">
-            <div class="rounded-2xl border border-line bg-surface/60 p-6">
-              <div class="mb-4 text-3xl font-semibold tracking-tight text-blue">01</div>
-              <h3 class="text-base font-semibold text-white">
-                <span data-lang="en">Commanding presence</span><span data-lang="id">Kehadiran berwibawa</span>
+          <div class="sc fu">
+            <div class="mb-4 flex items-start gap-3">
+              <span class="nb">01</span>
+              <h3 class="pt-1 text-base font-semibold text-white">
+                <span data-lang="en">AI &amp; Intelligent Automation</span>
+                <span data-lang="id">AI &amp; Otomasi Cerdas</span>
               </h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                <span data-lang="en">Designed to project confidence, precision, and executive-grade authority from first scroll.</span>
-                <span data-lang="id">Dirancang untuk memproyeksikan kepercayaan diri, presisi, dan otoritas kelas eksekutif sejak scroll pertama.</span>
-              </p>
             </div>
-            <div class="rounded-2xl border border-line bg-surface/60 p-6">
-              <div class="mb-4 text-3xl font-semibold tracking-tight text-blue">02</div>
-              <h3 class="text-base font-semibold text-white">
-                <span data-lang="en">Institutional-grade trust</span><span data-lang="id">Kepercayaan kelas institusional</span>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Private LLM deployment, AI-powered workflows, intelligent document processing, chatbot systems, and decision-support automation. We operationalise AI inside your existing infrastructure — no rip-and-replace required.</span>
+              <span data-lang="id">Deployment LLM privat, workflow bertenaga AI, pemrosesan dokumen cerdas, sistem chatbot, dan otomasi pendukung keputusan. Kami mengoperasionalkan AI di dalam infrastruktur Anda yang ada — tanpa perlu ganti sistem dari awal.</span>
+            </p>
+          </div>
+
+          <div class="sc fu">
+            <div class="mb-4 flex items-start gap-3">
+              <span class="nb">02</span>
+              <h3 class="pt-1 text-base font-semibold text-white">
+                <span data-lang="en">Cloud Infrastructure &amp; DevOps</span>
+                <span data-lang="id">Infrastruktur Cloud &amp; DevOps</span>
               </h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                <span data-lang="en">Language and positioning calibrated for enterprise, finance, government, and healthcare buyers.</span>
-                <span data-lang="id">Bahasa dan positioning yang dikalibrasi untuk pembeli enterprise, keuangan, pemerintah, dan kesehatan.</span>
-              </p>
             </div>
-            <div class="rounded-2xl border border-line bg-surface/60 p-6">
-              <div class="mb-4 text-3xl font-semibold tracking-tight text-blue">03</div>
-              <h3 class="text-base font-semibold text-white">
-                <span data-lang="en">Bilingual by design</span><span data-lang="id">Bilingual by design</span>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Multi-cloud architecture, container orchestration, CI/CD pipelines, infrastructure-as-code, observability stacks, and cost optimisation. We build production environments that hold up under real load and real pressure.</span>
+              <span data-lang="id">Arsitektur multi-cloud, orkestrasi container, pipeline CI/CD, infrastructure-as-code, stack observability, dan optimasi biaya. Kami membangun lingkungan produksi yang bertahan di bawah beban dan tekanan nyata.</span>
+            </p>
+          </div>
+
+          <div class="sc fu">
+            <div class="mb-4 flex items-start gap-3">
+              <span class="nb">03</span>
+              <h3 class="pt-1 text-base font-semibold text-white">
+                <span data-lang="en">Custom Platform Development</span>
+                <span data-lang="id">Pengembangan Platform Custom</span>
               </h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                <span data-lang="en">Full Indonesian and English support. No market is unreachable, no client is left without context.</span>
-                <span data-lang="id">Dukungan penuh Bahasa Indonesia dan Inggris. Tidak ada pasar yang tidak terjangkau.</span>
-              </p>
             </div>
-            <div class="rounded-2xl border border-line bg-surface/60 p-6">
-              <div class="mb-4 text-3xl font-semibold tracking-tight text-blue">04</div>
-              <h3 class="text-base font-semibold text-white">
-                <span data-lang="en">Built to scale</span><span data-lang="id">Dibangun untuk berkembang</span>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Enterprise portals, multi-tenant SaaS, internal operations platforms, mobile applications, and customer-facing digital products. Engineered for long-term maintainability, not just fast delivery.</span>
+              <span data-lang="id">Portal enterprise, SaaS multi-tenant, platform operasional internal, aplikasi mobile, dan produk digital customer-facing. Direkayasa untuk maintainability jangka panjang, bukan sekadar pengiriman cepat.</span>
+            </p>
+          </div>
+
+          <div class="sc fu">
+            <div class="mb-4 flex items-start gap-3">
+              <span class="nb">04</span>
+              <h3 class="pt-1 text-base font-semibold text-white">
+                <span data-lang="en">System Integration &amp; API Architecture</span>
+                <span data-lang="id">Integrasi Sistem &amp; Arsitektur API</span>
               </h3>
-              <p class="mt-2 text-sm leading-7 text-muted">
-                <span data-lang="en">This structure expands cleanly into case studies, sector pages, and product reveals as the business grows.</span>
-                <span data-lang="id">Struktur ini berkembang dengan bersih menjadi studi kasus, halaman sektor, dan peluncuran produk seiring pertumbuhan bisnis.</span>
-              </p>
             </div>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">ERP, CRM, and legacy system integration. API gateway design, event-driven middleware, and data pipeline architecture. We eliminate fragmentation and restore operational clarity across every layer of your stack.</span>
+              <span data-lang="id">Integrasi ERP, CRM, dan sistem legacy. Desain API gateway, middleware event-driven, dan arsitektur data pipeline. Kami menghilangkan fragmentasi dan mengembalikan kejelasan operasional di setiap lapisan stack Anda.</span>
+            </p>
           </div>
-        </div>
-      </section>
 
-      <div class="rule mx-auto max-w-6xl px-6"></div>
-
-      <!-- ======= ROADMAP ======= -->
-      <section id="roadmap" class="mx-auto max-w-6xl px-6 py-24">
-        <div class="mb-14 fade-up">
-          <p class="text-xs font-medium uppercase tracking-[.28em] text-blue mb-3">Roadmap</p>
-          <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl max-w-3xl">
-            <span data-lang="en">Capability built intentionally. Revealed strategically.</span>
-            <span data-lang="id">Kapabilitas dibangun dengan niat. Diungkap secara strategis.</span>
-          </h2>
-        </div>
-
-        <div class="grid gap-6 lg:grid-cols-3">
-          <div class="rounded-2xl border border-blue/40 bg-blueSoft p-8 fade-up">
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs uppercase tracking-[.22em] text-muted">
-                <span data-lang="en">Phase 01</span><span data-lang="id">Fase 01</span>
-              </span>
-              <span class="flex items-center gap-1.5 text-xs text-emerald-400 uppercase tracking-[.2em]">
-                <span class="h-1.5 w-1.5 rounded-full bg-emerald-400 pulse"></span>
-                <span data-lang="en">Live</span><span data-lang="id">Aktif</span>
-              </span>
+          <div class="sc fu">
+            <div class="mb-4 flex items-start gap-3">
+              <span class="nb">05</span>
+              <h3 class="pt-1 text-base font-semibold text-white">
+                <span data-lang="en">Cybersecurity &amp; Zero Trust Architecture</span>
+                <span data-lang="id">Keamanan Siber &amp; Arsitektur Zero Trust</span>
+              </h3>
             </div>
-            <h3 class="text-xl font-semibold text-white">
-              <span data-lang="en">Company presence</span><span data-lang="id">Kehadiran perusahaan</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Premium bilingual digital profile. Clean positioning, institutional trust signals, authoritative copy.</span>
-              <span data-lang="id">Profil digital bilingual premium. Positioning bersih, sinyal kepercayaan institusional, copywriting berwibawa.</span>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Security posture assessment, identity and access management, zero trust network design, endpoint protection, compliance frameworks, and incident response planning. Built for organisations that operate in high-stakes regulatory environments.</span>
+              <span data-lang="id">Penilaian postur keamanan, manajemen identitas dan akses, desain jaringan zero trust, perlindungan endpoint, kerangka kepatuhan, dan perencanaan respons insiden. Dibangun untuk organisasi yang beroperasi di lingkungan regulasi berisiko tinggi.</span>
             </p>
           </div>
 
-          <div class="rounded-2xl border border-line bg-surface/40 p-8 fade-up">
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs uppercase tracking-[.22em] text-muted">
-                <span data-lang="en">Phase 02</span><span data-lang="id">Fase 02</span>
-              </span>
-              <span class="text-xs text-amber-400 uppercase tracking-[.2em]">
-                <span data-lang="en">Upcoming</span><span data-lang="id">Mendatang</span>
-              </span>
+          <div class="sc fu">
+            <div class="mb-4 flex items-start gap-3">
+              <span class="nb">06</span>
+              <h3 class="pt-1 text-base font-semibold text-white">
+                <span data-lang="en">Digital Transformation &amp; Technology Strategy</span>
+                <span data-lang="id">Transformasi Digital &amp; Strategi Teknologi</span>
+              </h3>
             </div>
-            <h3 class="text-xl font-semibold text-white">
-              <span data-lang="en">Product visibility</span><span data-lang="id">Visibilitas produk</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Controlled reveal of internal platforms with strategic positioning and clean commercial framing.</span>
-              <span data-lang="id">Pengungkapan terkontrol platform internal dengan positioning strategis dan framing komersial yang bersih.</span>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Technology roadmapping, digital maturity assessment, vendor evaluation, change management, and executive advisory. We help leadership teams make technology decisions with confidence — not guesswork.</span>
+              <span data-lang="id">Penyusunan roadmap teknologi, penilaian kematangan digital, evaluasi vendor, manajemen perubahan, dan konsultasi eksekutif. Kami membantu tim kepemimpinan membuat keputusan teknologi dengan keyakinan — bukan tebakan.</span>
             </p>
           </div>
 
-          <div class="rounded-2xl border border-line bg-surface/20 p-8 fade-up">
-            <div class="flex items-center justify-between mb-6">
-              <span class="text-xs uppercase tracking-[.22em] text-muted">
-                <span data-lang="en">Phase 03</span><span data-lang="id">Fase 03</span>
-              </span>
-              <span class="text-xs text-muted uppercase tracking-[.2em]">
-                <span data-lang="en">Planned</span><span data-lang="id">Direncanakan</span>
-              </span>
-            </div>
-            <h3 class="text-xl font-semibold text-white">
-              <span data-lang="en">Authority expansion</span><span data-lang="id">Ekspansi otoritas</span>
-            </h3>
-            <p class="mt-3 text-sm leading-7 text-muted">
-              <span data-lang="en">Case studies, sector-specific pages, and deeper proof structures that compound credibility over time.</span>
-              <span data-lang="id">Studi kasus, halaman spesifik sektor, dan struktur bukti yang lebih dalam yang mengkompound kredibilitas seiring waktu.</span>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <div class="rule mx-auto max-w-6xl px-6"></div>
-
-      <!-- ======= CONTACT ======= -->
-      <section id="contact" class="mx-auto max-w-6xl px-6 py-24">
-        <div class="grid gap-16 lg:grid-cols-2 lg:items-start">
-          <div class="fade-up">
-            <p class="text-xs font-medium uppercase tracking-[.28em] text-blue mb-3">
-              <span data-lang="en">Contact</span><span data-lang="id">Kontak</span>
-            </p>
-            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
-              <span data-lang="en">Start with a conversation that respects your time.</span>
-              <span data-lang="id">Mulai dengan percakapan yang menghargai waktu Anda.</span>
-            </h2>
-            <p class="mt-6 text-base leading-8 text-muted max-w-md">
-              <span data-lang="en">We engage with directness and preparation. No generic responses. No wasted cycles. We respond in Indonesian and English.</span>
-              <span data-lang="id">Kami terlibat dengan ketegasan dan persiapan. Tidak ada respons generik. Tidak ada siklus yang terbuang. Kami merespons dalam Bahasa Indonesia dan Inggris.</span>
-            </p>
-          </div>
-
-          <div class="rounded-2xl border border-line bg-surface/60 p-8 fade-up">
-            <div class="space-y-7">
+          <div class="sc fu md:col-span-2 xl:col-span-3">
+            <div class="flex flex-col gap-5 sm:flex-row sm:items-start">
+              <div class="flex-shrink-0">
+                <span class="nb">07</span>
+              </div>
               <div>
-                <p class="text-xs uppercase tracking-[.22em] text-dim mb-2">Email</p>
+                <h3 class="text-base font-semibold text-white">
+                  <span data-lang="en">Data Engineering &amp; Business Intelligence</span>
+                  <span data-lang="id">Rekayasa Data &amp; Business Intelligence</span>
+                </h3>
+                <p class="mt-3 text-sm leading-7 text-muted">
+                  <span data-lang="en">Data warehouse design, ETL pipeline construction, real-time analytics, BI dashboard development, and data governance frameworks. We convert scattered operational data into structured, queryable intelligence that actually drives decisions. Whether your data lives in databases, spreadsheets, APIs, or legacy systems — we centralise, clean, and activate it.</span>
+                  <span data-lang="id">Desain data warehouse, konstruksi pipeline ETL, analitik real-time, pengembangan dashboard BI, dan kerangka tata kelola data. Kami mengubah data operasional yang tersebar menjadi intelijen terstruktur yang benar-benar mendorong keputusan. Baik data Anda ada di database, spreadsheet, API, atau sistem legacy — kami sentralisasi, bersihkan, dan aktifkan.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- SECTOR TAGS -->
+        <div class="mt-12 fu">
+          <p class="mb-4 text-xs uppercase tracking-[.24em] text-dim">
+            <span data-lang="en">Sectors we serve</span>
+            <span data-lang="id">Sektor yang kami layani</span>
+          </p>
+          <div class="flex flex-wrap gap-2">
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Enterprise &amp; Conglomerate</span><span data-lang="id">Enterprise &amp; Konglomerat</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Government &amp; Public Sector</span><span data-lang="id">Pemerintah &amp; Sektor Publik</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Financial Services &amp; Fintech</span><span data-lang="id">Layanan Keuangan &amp; Fintech</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Telecommunications</span><span data-lang="id">Telekomunikasi</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Healthcare &amp; Pharmaceutical</span><span data-lang="id">Kesehatan &amp; Farmasi</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Logistics &amp; Supply Chain</span><span data-lang="id">Logistik &amp; Rantai Pasok</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Education &amp; Research</span><span data-lang="id">Pendidikan &amp; Riset</span></span>
+            <span class="rounded-lg border border-line bg-white/[.03] px-3.5 py-1.5 text-xs font-medium text-muted"><span data-lang="en">Startup &amp; Growth-stage</span><span data-lang="id">Startup &amp; Tahap pertumbuhan</span></span>
+          </div>
+        </div>
+      </section>
+
+      <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
+
+      <!-- ===== APPROACH ===== -->
+      <section id="approach" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="mb-4 fu">
+          <p class="text-xs font-semibold uppercase tracking-[.28em] text-blue">
+            <span data-lang="en">How we work</span>
+            <span data-lang="id">Cara kami bekerja</span>
+          </p>
+        </div>
+        <h2 class="mb-14 max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl fu">
+          <span data-lang="en">We diagnose first. We never prescribe before we understand.</span>
+          <span data-lang="id">Kami mendiagnosis terlebih dahulu. Kami tidak pernah meresepkan sebelum memahami.</span>
+        </h2>
+
+        <div class="grid gap-5 lg:grid-cols-4">
+          <div class="relative rounded-2xl border border-line bg-surface/50 p-6 fu step-line">
+            <div class="mb-4 text-3xl font-bold tracking-tight text-blue">01</div>
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Discovery &amp; Diagnosis</span>
+              <span data-lang="id">Penemuan &amp; Diagnosis</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">We map your current state: systems, gaps, constraints, and strategic goals. No assumption-led proposals.</span>
+              <span data-lang="id">Kami memetakan kondisi Anda saat ini: sistem, celah, kendala, dan tujuan strategis. Tidak ada proposal berbasis asumsi.</span>
+            </p>
+          </div>
+          <div class="relative rounded-2xl border border-line bg-surface/50 p-6 fu">
+            <div class="mb-4 text-3xl font-bold tracking-tight text-blue">02</div>
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Architecture &amp; Design</span>
+              <span data-lang="id">Arsitektur &amp; Desain</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">We propose a solution architecture with clear rationale, trade-offs, and a realistic delivery plan — before a line of code is written.</span>
+              <span data-lang="id">Kami mengusulkan arsitektur solusi dengan alasan yang jelas, trade-off, dan rencana pengiriman yang realistis — sebelum satu baris kode ditulis.</span>
+            </p>
+          </div>
+          <div class="relative rounded-2xl border border-line bg-surface/50 p-6 fu">
+            <div class="mb-4 text-3xl font-bold tracking-tight text-blue">03</div>
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Build &amp; Integrate</span>
+              <span data-lang="id">Bangun &amp; Integrasikan</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Delivery in structured sprints with visibility at every stage. You always know what has been built, what is in progress, and what is next.</span>
+              <span data-lang="id">Pengiriman dalam sprint terstruktur dengan visibilitas di setiap tahap. Anda selalu tahu apa yang sudah dibangun, apa yang sedang berjalan, dan apa yang selanjutnya.</span>
+            </p>
+          </div>
+          <div class="relative rounded-2xl border border-line bg-surface/50 p-6 fu">
+            <div class="mb-4 text-3xl font-bold tracking-tight text-blue">04</div>
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Operate &amp; Evolve</span>
+              <span data-lang="id">Operasikan &amp; Kembangkan</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Post-delivery, we remain available for operations support, system evolution, and strategic guidance. Relationships, not transactions.</span>
+              <span data-lang="id">Pasca pengiriman, kami tetap tersedia untuk dukungan operasional, evolusi sistem, dan panduan strategis. Hubungan, bukan transaksi.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
+
+      <!-- ===== WHY US ===== -->
+      <section id="why" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="mb-4 fu">
+          <p class="text-xs font-semibold uppercase tracking-[.28em] text-blue">
+            <span data-lang="en">Why Global Telko Informatika</span>
+            <span data-lang="id">Mengapa Global Telko Informatika</span>
+          </p>
+        </div>
+        <h2 class="mb-6 max-w-4xl text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl fu">
+          <span data-lang="en">The right consultancy removes uncertainty. It does not create more of it.</span>
+          <span data-lang="id">Konsultan yang tepat menghilangkan ketidakpastian. Bukan malah menciptakannya.</span>
+        </h2>
+        <p class="mb-16 max-w-2xl text-lg leading-9 text-muted fu">
+          <span data-lang="en">Most organisations do not lack technology options. They lack a partner who can unify strategy, execution, and accountability under one roof — and speak plainly about what will actually work.</span>
+          <span data-lang="id">Kebanyakan organisasi tidak kekurangan pilihan teknologi. Mereka kekurangan mitra yang dapat menyatukan strategi, eksekusi, dan akuntabilitas di bawah satu atap — dan berbicara jujur tentang apa yang sebenarnya akan berhasil.</span>
+        </p>
+
+        <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-3 fu">
+          <div class="rounded-2xl border border-line bg-surface/50 p-7">
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">No knowledge gaps between teams</span>
+              <span data-lang="id">Tidak ada celah pengetahuan antar tim</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Because we cover the full stack — AI, cloud, security, data, and platforms — your strategy and your execution share the same understanding. Nothing is lost in translation between specialist silos.</span>
+              <span data-lang="id">Karena kami mencakup full stack — AI, cloud, keamanan, data, dan platform — strategi dan eksekusi Anda berbagi pemahaman yang sama. Tidak ada yang hilang di antara silo spesialis.</span>
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-surface/50 p-7">
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Accountable, not advisory-only</span>
+              <span data-lang="id">Akuntabel, bukan hanya konsultatif</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">We do not write reports and leave. We design, build, and stand behind every system we deliver. When something needs to be fixed, we fix it — not hand it to a different team.</span>
+              <span data-lang="id">Kami tidak menulis laporan lalu pergi. Kami merancang, membangun, dan bertanggung jawab atas setiap sistem yang kami sampaikan. Ketika ada yang perlu diperbaiki, kami perbaiki — tidak diserahkan ke tim lain.</span>
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-surface/50 p-7">
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Honest, context-aware advice</span>
+              <span data-lang="id">Saran jujur yang memahami konteks</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">We tell you what you need, not what generates the largest engagement. If a simpler solution solves your problem, that is what we recommend — and explain why.</span>
+              <span data-lang="id">Kami memberi tahu apa yang Anda butuhkan, bukan apa yang menghasilkan engagement terbesar. Jika solusi yang lebih sederhana menyelesaikan masalah Anda, itulah yang kami rekomendasikan — dan kami jelaskan alasannya.</span>
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-surface/50 p-7">
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Indonesian market depth, global standard</span>
+              <span data-lang="id">Kedalaman pasar Indonesia, standar global</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">We understand Indonesian regulatory environments, local system landscapes, and institutional dynamics — combined with international engineering and consulting standards.</span>
+              <span data-lang="id">Kami memahami lingkungan regulasi Indonesia, lanskap sistem lokal, dan dinamika institusional — dikombinasikan dengan standar rekayasa dan konsultasi internasional.</span>
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-surface/50 p-7">
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Structured for scale, not just the current project</span>
+              <span data-lang="id">Terstruktur untuk skala, bukan hanya proyek saat ini</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Every system we deliver is designed with the next phase in mind. Architecture that does not become a liability as your organisation grows.</span>
+              <span data-lang="id">Setiap sistem yang kami sampaikan dirancang dengan fase berikutnya dalam pikiran. Arsitektur yang tidak menjadi beban seiring pertumbuhan organisasi Anda.</span>
+            </p>
+          </div>
+          <div class="rounded-2xl border border-line bg-surface/50 p-7">
+            <h3 class="mb-3 text-base font-semibold text-white">
+              <span data-lang="en">Bilingual. No loss of nuance.</span>
+              <span data-lang="id">Bilingual. Tanpa kehilangan nuansa.</span>
+            </h3>
+            <p class="text-sm leading-7 text-muted">
+              <span data-lang="en">Full delivery in Indonesian or English, including documentation, presentations, and stakeholder communication. No information degraded through translation.</span>
+              <span data-lang="id">Layanan penuh dalam Bahasa Indonesia atau Inggris, termasuk dokumentasi, presentasi, dan komunikasi pemangku kepentingan. Tidak ada informasi yang terdegradasi melalui terjemahan.</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
+
+      <!-- ===== CONTACT ===== -->
+      <section id="contact" class="mx-auto max-w-6xl px-6 py-24">
+        <div class="grid gap-14 lg:grid-cols-[1.1fr_.9fr] lg:items-start">
+          <div class="fu">
+            <p class="text-xs font-semibold uppercase tracking-[.28em] text-blue mb-4">
+              <span data-lang="en">Start here</span>
+              <span data-lang="id">Mulai di sini</span>
+            </p>
+            <h2 class="text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">
+              <span data-lang="en">Tell us your problem. We will tell you if we can solve it.</span>
+              <span data-lang="id">Ceritakan masalah Anda. Kami akan memberi tahu apakah kami bisa menyelesaikannya.</span>
+            </h2>
+            <p class="mt-6 max-w-lg text-lg leading-9 text-muted">
+              <span data-lang="en">We do not require a fully formed brief. A clear description of your current situation, your goals, and your constraints is enough for us to have a meaningful first conversation. We respond directly — no gatekeepers, no automated replies.</span>
+              <span data-lang="id">Kami tidak memerlukan brief yang sudah terbentuk sempurna. Deskripsi yang jelas tentang situasi Anda saat ini, tujuan, dan kendala Anda sudah cukup untuk percakapan pertama yang bermakna. Kami merespons langsung — tanpa perantara, tanpa balasan otomatis.</span>
+            </p>
+            <div class="mt-10 space-y-2 fu">
+              <div class="flex items-start gap-3">
+                <svg class="mt-1 flex-shrink-0 text-blue" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p class="text-sm text-muted"><span data-lang="en">Initial response within one business day</span><span data-lang="id">Respons awal dalam satu hari kerja</span></p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="mt-1 flex-shrink-0 text-blue" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p class="text-sm text-muted"><span data-lang="en">No obligation to proceed after discovery</span><span data-lang="id">Tidak ada kewajiban untuk melanjutkan setelah discovery</span></p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="mt-1 flex-shrink-0 text-blue" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l4 4 6-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p class="text-sm text-muted"><span data-lang="en">Available in Indonesian and English</span><span data-lang="id">Tersedia dalam Bahasa Indonesia dan Inggris</span></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-2xl border border-line bg-surface/60 p-8 fu">
+            <div class="space-y-8">
+              <div>
+                <p class="mb-2 text-xs uppercase tracking-[.22em] text-dim">Email</p>
                 <a href="mailto:halo@globaltelko.com"
-                   class="text-xl font-semibold text-white transition hover:text-blue">
-                  halo@globaltelko.com
-                </a>
+                   class="text-xl font-semibold text-white transition hover:text-blue">halo@globaltelko.com</a>
               </div>
               <div class="rule"></div>
               <div>
-                <p class="text-xs uppercase tracking-[.22em] text-dim mb-2">
-                  <span data-lang="en">Phone / WhatsApp</span><span data-lang="id">Telepon / WhatsApp</span>
+                <p class="mb-2 text-xs uppercase tracking-[.22em] text-dim">
+                  <span data-lang="en">WhatsApp / Phone</span><span data-lang="id">WhatsApp / Telepon</span>
                 </p>
                 <a href="https://wa.me/6281524083899"
-                   class="text-xl font-semibold text-white transition hover:text-blue">
-                  0815-2408-3899
-                </a>
+                   class="text-xl font-semibold text-white transition hover:text-blue">0815-2408-3899</a>
               </div>
               <div class="rule"></div>
               <div>
-                <p class="text-xs uppercase tracking-[.22em] text-dim mb-2">
-                  <span data-lang="en">Language</span><span data-lang="id">Bahasa</span>
+                <p class="mb-2 text-xs uppercase tracking-[.22em] text-dim">
+                  <span data-lang="en">Response language</span><span data-lang="id">Bahasa respons</span>
                 </p>
-                <p class="text-sm text-muted">
-                  <span data-lang="en">Indonesian &amp; English</span>
-                  <span data-lang="id">Bahasa Indonesia &amp; Inggris</span>
-                </p>
+                <p class="text-sm text-muted"><span data-lang="en">Indonesian &amp; English</span><span data-lang="id">Bahasa Indonesia &amp; Inggris</span></p>
               </div>
               <a href="mailto:halo@globaltelko.com"
-                 class="flex w-full items-center justify-center gap-2 rounded-xl bg-blue py-3.5 text-sm font-semibold text-white transition hover:bg-[#3A8FEF] hover:shadow-[0_0_28px_rgba(43,127,224,.3)]">
-                <span data-lang="en">Send a message</span>
-                <span data-lang="id">Kirim pesan</span>
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                 class="flex w-full items-center justify-center gap-2 rounded-xl bg-blue py-3.5 text-sm font-semibold text-white transition hover:bg-[#3D8FEF] hover:shadow-[0_0_28px_rgba(43,128,224,.28)]">
+                <span data-lang="en">Send us a message</span>
+                <span data-lang="id">Kirim pesan kepada kami</span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </a>
             </div>
           </div>
         </div>
       </section>
+
     </main>
 
-    <!-- ======= FOOTER ======= -->
     <footer class="border-t border-line">
       <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-xs text-dim md:flex-row md:items-center md:justify-between">
         <div class="flex items-center gap-3">
-          <img src="https://raw.githubusercontent.com/Aldhie/globaltelko-web/main/Logo%20copy%204.png" alt="" class="h-6 w-auto opacity-70" />
-          <span>© 2026 Global Telko Informatika.</span>
+          <img src="https://raw.githubusercontent.com/Aldhie/globaltelko-web/main/Logo%20copy%204.png" alt="" class="h-6 w-auto opacity-60" />
+          <span>&copy; 2026 Global Telko Informatika. <span data-lang="en">All rights reserved.</span><span data-lang="id">Semua hak dilindungi.</span></span>
         </div>
-        <p>
-          <span data-lang="en">Confident. Sharp. Responsible.</span>
-          <span data-lang="id">Percaya Diri. Tajam. Bertanggung Jawab.</span>
+        <p class="text-dim">
+          <span data-lang="en">Confident. Accountable. End-to-end.</span>
+          <span data-lang="id">Percaya Diri. Akuntabel. End-to-end.</span>
         </p>
       </div>
     </footer>
@@ -521,12 +584,11 @@
   </div>
 
   <script>
-    // fade-up on scroll
-    const observer = new IntersectionObserver(
-      (entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } }),
-      { threshold: 0.08 }
+    const io = new IntersectionObserver(
+      es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); } }),
+      { threshold: 0.07 }
     );
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fu').forEach(el => io.observe(el));
   </script>
 </body>
 </html>
