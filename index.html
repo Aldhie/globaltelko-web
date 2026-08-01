@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Telko Informatika — Engineering Confidence</title>
-  <meta name="description" content="Global Telko Informatika delivers bank-grade technology consulting, cloud infrastructure, AI integration, and full-stack systems engineered for reliability, trust, and long-term scale." />
-  <meta name="theme-color" content="#0A0A0F" />
-  <meta property="og:title" content="Global Telko Informatika — Engineering Confidence" />
-  <meta property="og:description" content="Bank-grade technology consulting for institutions that cannot afford to fail." />
+  <title>Global Telko Informatika — High-Confidence Digital Architecture</title>
+  <meta name="description" content="Global Telko Informatika delivers high-confidence technology consulting, AI integration, cloud infrastructure, and modern systems design for organizations that need precision, trust, and strategic execution." />
+  <meta name="theme-color" content="#07111F" />
+  <meta property="og:title" content="Global Telko Informatika — High-Confidence Digital Architecture" />
+  <meta property="og:description" content="Technology consulting engineered to look sharp, feel premium, and perform under pressure." />
   <meta property="og:type" content="website" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -15,22 +15,31 @@
       theme: {
         extend: {
           colors: {
-            bg: '#0A0A0F',
-            panel: '#10131B',
-            line: 'rgba(255,255,255,0.09)',
-            text: '#F5F7FA',
-            muted: '#98A2B3',
-            accent: '#3B82F6',
-            accentSoft: 'rgba(59,130,246,0.18)'
+            bg: '#07111F',
+            bg2: '#0B1628',
+            panel: 'rgba(10, 21, 39, 0.72)',
+            line: 'rgba(255,255,255,0.08)',
+            text: '#F8FAFC',
+            muted: '#A5B4C8',
+            blue: '#2498E3',
+            indigo: '#2F47A7',
+            cyan: '#6EC7FF',
+            lime: '#C6E313',
+            orange: '#F28B1D',
+            magenta: '#B93BAA',
+            silver: '#B8BBC2'
           },
           fontFamily: {
             sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
           },
           boxShadow: {
-            glow: '0 0 0 1px rgba(59,130,246,.22), 0 20px 80px rgba(59,130,246,.18)'
+            neon: '0 0 0 1px rgba(110,199,255,.22), 0 24px 90px rgba(36,152,227,.22)',
+            card: '0 30px 80px rgba(3, 10, 23, 0.35)'
           },
           backgroundImage: {
-            grid: 'linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px)'
+            grid: 'linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px)',
+            spectrum: 'linear-gradient(135deg, #2498E3 0%, #6EC7FF 22%, #C6E313 42%, #F28B1D 64%, #E54B31 78%, #B93BAA 100%)',
+            hero: 'radial-gradient(circle at 18% 20%, rgba(36,152,227,.26), transparent 28%), radial-gradient(circle at 78% 16%, rgba(198,227,19,.12), transparent 18%), radial-gradient(circle at 72% 56%, rgba(185,59,170,.18), transparent 26%), linear-gradient(180deg, #07111F 0%, #081426 48%, #091727 100%)'
           }
         }
       }
@@ -38,159 +47,218 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-    body { background: radial-gradient(circle at top, rgba(59,130,246,.12), transparent 28%), #0A0A0F; }
-    .glass { backdrop-filter: blur(14px); background: rgba(16,19,27,.72); }
-    .hero-line { background: linear-gradient(90deg, transparent, rgba(59,130,246,.7), transparent); }
+    body { background: #07111F; }
+    .glass { backdrop-filter: blur(18px); background: rgba(10, 21, 39, 0.68); }
+    .spectrum-border { position: relative; }
+    .spectrum-border::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(36,152,227,.8), rgba(110,199,255,.55), rgba(198,227,19,.42), rgba(242,139,29,.38), rgba(185,59,170,.48));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+    .mesh {
+      background-image:
+        radial-gradient(circle at 20% 22%, rgba(36,152,227,.18), transparent 22%),
+        radial-gradient(circle at 72% 30%, rgba(110,199,255,.14), transparent 20%),
+        radial-gradient(circle at 80% 72%, rgba(185,59,170,.16), transparent 22%),
+        radial-gradient(circle at 28% 82%, rgba(198,227,19,.08), transparent 18%);
+    }
+    .text-glow {
+      text-shadow: 0 0 28px rgba(110,199,255,.16);
+    }
   </style>
 </head>
-<body class="bg-bg text-text font-sans antialiased selection:bg-accent/30">
-  <div class="fixed inset-0 bg-grid bg-[size:48px_48px] opacity-[0.05] pointer-events-none"></div>
-  <div class="relative">
-    <header class="sticky top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-xl">
+<body class="font-sans text-text antialiased selection:bg-cyan/20">
+  <div class="fixed inset-0 bg-grid bg-[size:52px_52px] opacity-[0.05] pointer-events-none"></div>
+  <div class="relative min-h-screen overflow-hidden bg-hero mesh">
+    <div class="absolute inset-x-0 top-[-120px] mx-auto h-[340px] w-[340px] rounded-full bg-sky-400/10 blur-3xl"></div>
+    <div class="absolute right-[-80px] top-[180px] h-[320px] w-[320px] rounded-full bg-fuchsia-500/10 blur-3xl"></div>
+
+    <header class="sticky top-0 z-50 border-b border-line bg-bg/70 backdrop-blur-2xl">
       <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <div>
-          <div class="text-sm uppercase tracking-[0.28em] text-muted">Global Telko Informatika</div>
-          <div class="mt-1 text-xs text-muted">Engineering confidence for critical systems</div>
+        <div class="flex items-center gap-4">
+          <div class="h-11 w-11 rounded-2xl bg-spectrum shadow-neon"></div>
+          <div>
+            <div class="text-sm font-semibold uppercase tracking-[0.28em] text-white">Global Telko</div>
+            <div class="mt-1 text-xs tracking-[0.18em] text-silver">Informatika</div>
+          </div>
         </div>
         <nav class="hidden items-center gap-8 text-sm text-muted md:flex">
-          <a href="#services" class="transition hover:text-text">Services</a>
-          <a href="#approach" class="transition hover:text-text">Approach</a>
-          <a href="#roadmap" class="transition hover:text-text">Roadmap</a>
-          <a href="#contact" class="transition hover:text-text">Contact</a>
+          <a href="#services" class="transition hover:text-white">Services</a>
+          <a href="#why" class="transition hover:text-white">Why us</a>
+          <a href="#roadmap" class="transition hover:text-white">Roadmap</a>
+          <a href="#contact" class="transition hover:text-white">Contact</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="mx-auto max-w-7xl px-6 pb-20 pt-20 lg:px-8 lg:pt-24">
-        <div class="grid gap-14 lg:grid-cols-[1.15fr_.85fr] lg:items-end">
+      <section class="mx-auto max-w-7xl px-6 pb-20 pt-16 lg:px-8 lg:pb-28 lg:pt-24">
+        <div class="grid gap-14 lg:grid-cols-[1.1fr_.9fr] lg:items-center">
           <div>
-            <div class="mb-6 inline-flex items-center rounded-full border border-accent/30 bg-accentSoft px-4 py-2 text-xs font-medium uppercase tracking-[0.24em] text-[#BFDBFE] shadow-glow">
-              Bank-grade technology consulting
+            <div class="mb-6 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium uppercase tracking-[0.26em] text-cyan shadow-neon">
+              Bank-grade confidence
+              <span class="inline-block h-2 w-2 rounded-full bg-lime"></span>
             </div>
-            <h1 class="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-white md:text-7xl">
-              Systems that look premium,
-              perform reliably,
-              and inspire trust instantly.
+            <h1 class="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] text-white text-glow md:text-7xl xl:text-[5.5rem]">
+              Premium digital presence
+              for institutions that expect
+              more than ordinary IT.
             </h1>
             <p class="mt-8 max-w-2xl text-lg leading-8 text-muted md:text-xl">
-              Global Telko Informatika architects high-confidence digital systems for organizations that need precision, resilience, and execution discipline. We design technology that feels sharp on the surface and remains dependable under real operational pressure.
+              We design high-confidence systems, modern infrastructure, and intelligent digital experiences that feel exclusive, operate reliably, and communicate capability the moment they are seen.
             </p>
             <div class="mt-10 flex flex-col gap-4 sm:flex-row">
-              <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-blue-500">Start a strategic conversation</a>
-              <a href="#services" class="inline-flex items-center justify-center rounded-xl border border-line bg-white/5 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10">Explore capabilities</a>
+              <a href="#contact" class="inline-flex items-center justify-center rounded-2xl bg-gradient-to-r from-blue to-cyan px-6 py-3.5 text-sm font-semibold text-white shadow-neon transition hover:scale-[1.01]">Start a strategic conversation</a>
+              <a href="#services" class="inline-flex items-center justify-center rounded-2xl border border-white/10 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10">Explore capabilities</a>
             </div>
-            <div class="mt-12 grid gap-6 border-t border-line pt-8 md:grid-cols-3">
-              <div>
-                <div class="text-3xl font-semibold text-white">Bilingual</div>
-                <p class="mt-2 text-sm leading-6 text-muted">Built for Indonesian and international business communication.</p>
+            <div class="mt-12 grid gap-5 md:grid-cols-3">
+              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <div class="text-2xl font-semibold text-white">Sharp</div>
+                <p class="mt-2 text-sm leading-6 text-muted">Positioned to feel confident, modern, and executive-facing.</p>
               </div>
-              <div>
-                <div class="text-3xl font-semibold text-white">AI-Ready</div>
-                <p class="mt-2 text-sm leading-6 text-muted">Prepared for advanced automation, AI integration, and edge deployment.</p>
+              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <div class="text-2xl font-semibold text-white">Reliable</div>
+                <p class="mt-2 text-sm leading-6 text-muted">Designed with trust, operational clarity, and long-term resilience.</p>
               </div>
-              <div>
-                <div class="text-3xl font-semibold text-white">Trust-First</div>
-                <p class="mt-2 text-sm leading-6 text-muted">Every page, workflow, and decision is shaped to reduce doubt and increase confidence.</p>
+              <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                <div class="text-2xl font-semibold text-white">Distinctive</div>
+                <p class="mt-2 text-sm leading-6 text-muted">A brand surface that looks premium without becoming theatrical.</p>
               </div>
             </div>
           </div>
 
-          <div class="glass rounded-3xl border border-line p-8 shadow-2xl">
-            <div class="mb-6 flex items-center justify-between">
-              <div>
-                <p class="text-xs uppercase tracking-[0.24em] text-muted">Operating model</p>
-                <h2 class="mt-2 text-2xl font-semibold text-white">Precision over noise</h2>
+          <div class="spectrum-border rounded-[2rem] p-[1px]">
+            <div class="glass rounded-[2rem] p-8 shadow-card">
+              <div class="flex items-start justify-between gap-6">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.24em] text-silver">Brand architecture</p>
+                  <h2 class="mt-3 text-3xl font-semibold tracking-[-0.03em] text-white">Global energy. Telko precision.</h2>
+                </div>
+                <div class="mt-1 flex gap-2">
+                  <span class="h-3 w-3 rounded-full bg-blue"></span>
+                  <span class="h-3 w-3 rounded-full bg-lime"></span>
+                  <span class="h-3 w-3 rounded-full bg-orange"></span>
+                  <span class="h-3 w-3 rounded-full bg-magenta"></span>
+                </div>
               </div>
-              <div class="h-3 w-3 rounded-full bg-emerald-400 shadow-[0_0_24px_rgba(52,211,153,.8)]"></div>
-            </div>
-            <div class="space-y-5 text-sm leading-7 text-muted">
-              <div class="rounded-2xl border border-line bg-white/[0.03] p-5">
-                We work like an elite systems partner: assess risk quickly, reduce ambiguity early, and build for continuity from the first architectural decision.
-              </div>
-              <div class="rounded-2xl border border-line bg-white/[0.03] p-5">
-                The result is not just a modern stack. It is a business surface that signals capability, control, and long-term reliability to every stakeholder.
-              </div>
-              <div class="rounded-2xl border border-line bg-white/[0.03] p-5">
-                Ideal for enterprise, startup, government, healthcare, finance, telecom, and institutions where failure carries real operational cost.
+              <div class="mt-8 grid gap-4">
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <div class="text-sm uppercase tracking-[0.18em] text-cyan">Global</div>
+                  <p class="mt-3 text-sm leading-7 text-muted">Expressed through motion, spectrum accents, and outward-looking visual energy that signals expansion and modern capability.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <div class="text-sm uppercase tracking-[0.18em] text-silver">Telko</div>
+                  <p class="mt-3 text-sm leading-7 text-muted">Grounded in structure, controlled spacing, disciplined typography, and a measured interface that feels dependable under scrutiny.</p>
+                </div>
+                <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                  <div class="text-sm uppercase tracking-[0.18em] text-white">Result</div>
+                  <p class="mt-3 text-sm leading-7 text-muted">A digital identity that looks futuristic, elegant, and commercially credible without losing seriousness or trust.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <div class="hero-line mx-auto h-px max-w-7xl"></div>
+      <section class="mx-auto max-w-7xl px-6 pb-10 lg:px-8">
+        <div class="grid gap-4 md:grid-cols-4">
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-blue/15 to-transparent p-6">
+            <div class="text-xs uppercase tracking-[0.24em] text-cyan">Audience</div>
+            <p class="mt-3 text-lg font-medium text-white">Enterprise, startup, public sector, healthcare, finance, telecom.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-lime/10 to-transparent p-6">
+            <div class="text-xs uppercase tracking-[0.24em] text-lime">Mode</div>
+            <p class="mt-3 text-lg font-medium text-white">Tech-forward, high-discipline, solution-oriented consulting.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-orange/10 to-transparent p-6">
+            <div class="text-xs uppercase tracking-[0.24em] text-orange">Positioning</div>
+            <p class="mt-3 text-lg font-medium text-white">Exclusive enough to impress, grounded enough to be trusted.</p>
+          </div>
+          <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-magenta/10 to-transparent p-6">
+            <div class="text-xs uppercase tracking-[0.24em] text-fuchsia-300">Delivery</div>
+            <p class="mt-3 text-lg font-medium text-white">Bilingual communication with sharp architecture and modern execution.</p>
+          </div>
+        </div>
+      </section>
 
       <section id="services" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div class="max-w-3xl">
-          <p class="text-sm uppercase tracking-[0.26em] text-[#93C5FD]">Capabilities</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white md:text-5xl">Built for clients who expect technology to behave like a competitive asset.</h2>
-          <p class="mt-6 text-lg leading-8 text-muted">We design and implement digital systems that are elegant in presentation, disciplined in operation, and structured for growth. The focus is always clarity, durability, and meaningful business leverage.</p>
+          <p class="text-sm uppercase tracking-[0.28em] text-cyan">Capabilities</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Technology structured like a premium service business, not a generic vendor.</h2>
+          <p class="mt-6 text-lg leading-8 text-muted">Every capability is framed to communicate control, precision, and execution maturity. The goal is not to list tools. The goal is to signal that the business knows how to carry responsibility.</p>
         </div>
 
         <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          <article class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-sm font-medium uppercase tracking-[0.22em] text-[#93C5FD]">AI Integration</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">AI & intelligent automation</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">LLM integration, private AI deployments, workflow automation, orchestration layers, and strategic AI implementation that aligns with real operating needs.</p>
+          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-cyan/40 hover:shadow-neon">
+            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue to-cyan"></div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">AI integration</h3>
+            <p class="mt-4 text-sm leading-7 text-muted">Private AI deployment, workflow orchestration, model integration, and applied intelligence strategies built around actual operational value.</p>
           </article>
-          <article class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-sm font-medium uppercase tracking-[0.22em] text-[#93C5FD]">Infrastructure</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Cloud, DevOps & reliability</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Production infrastructure, containerization, CI/CD, observability, hardening, and operational design built for resilience and maintainability.</p>
+          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-lime/40 hover:shadow-neon">
+            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-lime to-cyan"></div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Cloud & DevOps</h3>
+            <p class="mt-4 text-sm leading-7 text-muted">Infrastructure, containers, pipelines, observability, and operational foundations that keep systems clean, durable, and scalable.</p>
           </article>
-          <article class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-sm font-medium uppercase tracking-[0.22em] text-[#93C5FD]">Applications</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Custom systems development</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Full-stack applications, multi-tenant platforms, internal systems, portals, and digital products engineered with long-term structure in mind.</p>
+          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-orange/40 hover:shadow-neon">
+            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-orange to-amber-300"></div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Custom platforms</h3>
+            <p class="mt-4 text-sm leading-7 text-muted">Internal systems, multi-tenant applications, portals, and digital products designed to support growth without visual or structural compromise.</p>
           </article>
-          <article class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-sm font-medium uppercase tracking-[0.22em] text-[#93C5FD]">Architecture</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">System integration & APIs</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Cross-platform integration, workflow design, middleware, and API architecture that reduce fragmentation and improve execution visibility.</p>
+          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-fuchsia-400/40 hover:shadow-neon">
+            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-magenta to-fuchsia-300"></div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">System integration</h3>
+            <p class="mt-4 text-sm leading-7 text-muted">APIs, middleware, and service architecture that reduce fragmentation and create cleaner business flows across platforms.</p>
           </article>
-          <article class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-sm font-medium uppercase tracking-[0.22em] text-[#93C5FD]">Security</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Security & Zero Trust</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Practical security controls, access design, cloud security posture, and trust-aware implementation for organizations that cannot tolerate preventable exposure.</p>
+          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-cyan/40 hover:shadow-neon">
+            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-cyan to-sky-300"></div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Security posture</h3>
+            <p class="mt-4 text-sm leading-7 text-muted">Practical hardening, access design, and trust-aware architecture for organizations that need operational seriousness, not checkbox security.</p>
           </article>
-          <article class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-sm font-medium uppercase tracking-[0.22em] text-[#93C5FD]">Advisory</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Technology strategy</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Decision support for founders and leaders who need technology direction, execution framing, and architectural clarity without wasting cycles on hype.</p>
+          <article class="rounded-[1.7rem] border border-white/10 bg-white/[0.04] p-8 transition hover:-translate-y-1 hover:border-blue/40 hover:shadow-neon">
+            <div class="h-1.5 w-16 rounded-full bg-gradient-to-r from-blue to-indigo"></div>
+            <h3 class="mt-6 text-2xl font-semibold text-white">Strategic advisory</h3>
+            <p class="mt-4 text-sm leading-7 text-muted">Technology direction for leaders who need clarity on what to build, what to avoid, and how to move with confidence.</p>
           </article>
         </div>
       </section>
 
-      <section id="approach" class="border-y border-line bg-white/[0.02]">
+      <section id="why" class="border-y border-white/10 bg-white/[0.02]">
         <div class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div class="grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
             <div>
-              <p class="text-sm uppercase tracking-[0.26em] text-[#93C5FD]">Approach</p>
-              <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white md:text-5xl">A company profile should feel like the company already knows what it is doing.</h2>
+              <p class="text-sm uppercase tracking-[0.28em] text-cyan">Why it works</p>
+              <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">The website should already feel like the solution.</h2>
+              <p class="mt-6 text-lg leading-8 text-muted">A serious technology consultancy cannot present itself like a template shop. The interface must project control, responsiveness, and mature taste before the first call ever happens.</p>
             </div>
             <div class="grid gap-6 md:grid-cols-2">
-              <div class="rounded-3xl border border-line bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-white">01</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Signal trust immediately</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">The first screen is designed to remove uncertainty. Strong language, controlled visuals, and disciplined layout create confidence before details are even explored.</p>
+              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
+                <div class="text-4xl font-semibold text-cyan">01</div>
+                <h3 class="mt-5 text-xl font-semibold text-white">Commanding first impression</h3>
+                <p class="mt-3 text-sm leading-7 text-muted">A bolder hero, stronger contrast, and richer color language make the company feel more alive, more capable, and more memorable.</p>
               </div>
-              <div class="rounded-3xl border border-line bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-white">02</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Stay premium, not theatrical</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">We avoid decorative excess. A high-trust brand looks intentional, precise, and calm under scrutiny rather than loud or exaggerated.</p>
+              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
+                <div class="text-4xl font-semibold text-lime">02</div>
+                <h3 class="mt-5 text-xl font-semibold text-white">Controlled futurism</h3>
+                <p class="mt-3 text-sm leading-7 text-muted">The visual system borrows from modern product brands, but remains disciplined enough for enterprise and institutional buyers.</p>
               </div>
-              <div class="rounded-3xl border border-line bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-white">03</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Speak to decision makers</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">The narrative is aimed at founders, executives, procurement teams, and operators who care about outcomes, credibility, and execution discipline.</p>
+              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
+                <div class="text-4xl font-semibold text-orange">03</div>
+                <h3 class="mt-5 text-xl font-semibold text-white">Multi-sector appeal</h3>
+                <p class="mt-3 text-sm leading-7 text-muted">The messaging is broad enough to support multiple client segments while still feeling premium and intentional.</p>
               </div>
-              <div class="rounded-3xl border border-line bg-white/[0.03] p-7">
-                <div class="text-4xl font-semibold text-white">04</div>
-                <h3 class="mt-5 text-xl font-semibold text-white">Prepare for future proofing</h3>
-                <p class="mt-3 text-sm leading-7 text-muted">Even a simple static site is structured to evolve into a larger digital presence with multilingual content, product pages, and strategic case studies.</p>
+              <div class="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
+                <div class="text-4xl font-semibold text-fuchsia-300">04</div>
+                <h3 class="mt-5 text-xl font-semibold text-white">Room to scale</h3>
+                <p class="mt-3 text-sm leading-7 text-muted">This structure can grow into bilingual service pages, future product reveals, and high-trust case studies without redesigning from zero.</p>
               </div>
             </div>
           </div>
@@ -199,51 +267,61 @@
 
       <section id="roadmap" class="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <div class="max-w-3xl">
-          <p class="text-sm uppercase tracking-[0.26em] text-[#93C5FD]">Roadmap</p>
-          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white md:text-5xl">Internal initiatives today. Strategic visibility tomorrow.</h2>
-          <p class="mt-6 text-lg leading-8 text-muted">Certain products and platforms remain internal for now, but the roadmap signals a firm that is building capability with intention. This keeps the public brand credible without overexposing unfinished assets.</p>
+          <p class="text-sm uppercase tracking-[0.28em] text-cyan">Roadmap</p>
+          <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">Internal capability now. Selective visibility later.</h2>
+          <p class="mt-6 text-lg leading-8 text-muted">The public brand should stay sharp and credible. Internal initiatives can remain undisclosed today, then surface in curated form once they strengthen the company narrative rather than distract from it.</p>
         </div>
 
-        <div class="mt-12 grid gap-6 lg:grid-cols-3">
-          <div class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-xs uppercase tracking-[0.22em] text-muted">Phase 01</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Company profile foundation</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Bilingual digital presence, clear service narrative, trust-first architecture, and premium market positioning.</p>
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <div class="spectrum-border rounded-[1.7rem] p-[1px]">
+            <div class="rounded-[1.7rem] bg-white/[0.04] p-8">
+              <div class="text-xs uppercase tracking-[0.22em] text-silver">Phase 01</div>
+              <h3 class="mt-4 text-2xl font-semibold text-white">Company profile excellence</h3>
+              <p class="mt-4 text-sm leading-7 text-muted">Establish a premium bilingual presence with strong trust signals, polished structure, and executive-grade presentation.</p>
+            </div>
           </div>
-          <div class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-xs uppercase tracking-[0.22em] text-muted">Phase 02</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Selected roadmap visibility</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Curated coming-soon sections for internal products that are ready to support the brand without revealing sensitive execution details.</p>
+          <div class="spectrum-border rounded-[1.7rem] p-[1px]">
+            <div class="rounded-[1.7rem] bg-white/[0.04] p-8">
+              <div class="text-xs uppercase tracking-[0.22em] text-silver">Phase 02</div>
+              <h3 class="mt-4 text-2xl font-semibold text-white">Roadmap visibility</h3>
+              <p class="mt-4 text-sm leading-7 text-muted">Reveal selected coming-soon initiatives with clean positioning, controlled disclosure, and stronger market signaling.</p>
+            </div>
           </div>
-          <div class="rounded-3xl border border-line bg-white/[0.03] p-8">
-            <div class="text-xs uppercase tracking-[0.22em] text-muted">Phase 03</div>
-            <h3 class="mt-4 text-2xl font-semibold text-white">Expanded authority layer</h3>
-            <p class="mt-4 text-sm leading-7 text-muted">Case studies, sector-specific pages, strategic insights, and stronger proof structures once disclosure becomes commercially useful.</p>
+          <div class="spectrum-border rounded-[1.7rem] p-[1px]">
+            <div class="rounded-[1.7rem] bg-white/[0.04] p-8">
+              <div class="text-xs uppercase tracking-[0.22em] text-silver">Phase 03</div>
+              <h3 class="mt-4 text-2xl font-semibold text-white">Authority expansion</h3>
+              <p class="mt-4 text-sm leading-7 text-muted">Add strategic insights, sector pages, deeper proof layers, and stronger commercial storytelling once disclosure becomes useful.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="contact" class="pb-24">
         <div class="mx-auto max-w-7xl px-6 lg:px-8">
-          <div class="rounded-[2rem] border border-line bg-gradient-to-b from-white/[0.05] to-white/[0.02] p-8 md:p-12">
-            <div class="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
-              <div>
-                <p class="text-sm uppercase tracking-[0.26em] text-[#93C5FD]">Contact</p>
-                <h2 class="mt-4 text-3xl font-semibold tracking-[-0.03em] text-white md:text-5xl">Technology decisions deserve a sharper conversation.</h2>
-                <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">For organizations seeking a technology partner that feels structured, discreet, technically mature, and execution-driven, reach out directly. We respond in both Indonesian and English.</p>
-              </div>
-              <div class="space-y-5 rounded-3xl border border-line bg-bg/60 p-8">
+          <div class="spectrum-border rounded-[2rem] p-[1px]">
+            <div class="rounded-[2rem] bg-gradient-to-b from-white/[0.05] to-white/[0.025] p-8 md:p-12">
+              <div class="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
                 <div>
-                  <div class="text-xs uppercase tracking-[0.2em] text-muted">Email</div>
-                  <a href="mailto:halo@globaltelko.com" class="mt-2 inline-block text-xl font-semibold text-white transition hover:text-[#93C5FD]">halo@globaltelko.com</a>
+                  <p class="text-sm uppercase tracking-[0.28em] text-cyan">Contact</p>
+                  <h2 class="mt-4 text-3xl font-semibold tracking-[-0.04em] text-white md:text-5xl">A sharper technology partner starts with a sharper first conversation.</h2>
+                  <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">For organizations seeking a confident, premium, and execution-driven technology consulting partner, contact us directly. We communicate in Indonesian and English.</p>
                 </div>
-                <div>
-                  <div class="text-xs uppercase tracking-[0.2em] text-muted">Phone / WhatsApp</div>
-                  <a href="https://wa.me/6281524083899" class="mt-2 inline-block text-xl font-semibold text-white transition hover:text-[#93C5FD]">0815-2408-3899</a>
-                </div>
-                <div>
-                  <div class="text-xs uppercase tracking-[0.2em] text-muted">Availability</div>
-                  <p class="mt-2 text-sm leading-7 text-muted">Open for strategic consulting, cloud infrastructure advisory, AI integration, and custom system initiatives.</p>
+                <div class="rounded-[1.7rem] border border-white/10 bg-bg/60 p-8 shadow-card">
+                  <div class="space-y-6">
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.2em] text-silver">Email</div>
+                      <a href="mailto:halo@globaltelko.com" class="mt-2 inline-block text-xl font-semibold text-white transition hover:text-cyan">halo@globaltelko.com</a>
+                    </div>
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.2em] text-silver">Phone / WhatsApp</div>
+                      <a href="https://wa.me/6281524083899" class="mt-2 inline-block text-xl font-semibold text-white transition hover:text-cyan">0815-2408-3899</a>
+                    </div>
+                    <div>
+                      <div class="text-xs uppercase tracking-[0.2em] text-silver">Language</div>
+                      <p class="mt-2 text-sm leading-7 text-muted">Bilingual communication for local and international business contexts.</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -252,10 +330,10 @@
       </section>
     </main>
 
-    <footer class="border-t border-line">
+    <footer class="border-t border-white/10">
       <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-muted lg:flex-row lg:items-center lg:justify-between lg:px-8">
         <p>© 2026 Global Telko Informatika. All rights reserved.</p>
-        <p>Built for trust, clarity, and long-term confidence.</p>
+        <p>Confident. Sharp. Responsible.</p>
       </div>
     </footer>
   </div>
