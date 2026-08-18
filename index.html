@@ -64,9 +64,6 @@
       --ease-spring:cubic-bezier(0.22, 0.68, 0, 1.1);
     }
 
-    /* ═══════════════════════════════════════
-       HERO BG — richer, more alive
-    ════════════════════════════════════════ */
     .hero-bg {
       background:
         radial-gradient(ellipse 80% 70% at 72% -10%,  rgba(26,111,224,0.09) 0%, transparent 65%),
@@ -75,9 +72,6 @@
         radial-gradient(ellipse 35% 35% at 52%  115%, rgba(0,184,148,0.04)  0%, transparent 58%);
     }
 
-    /* ═══════════════════════════════════════
-       SCROLL REVEAL
-    ════════════════════════════════════════ */
     .fu  { opacity:0; transform:translateY(28px); transition:opacity .65s var(--ease-out), transform .65s var(--ease-out); }
     .fu.on { opacity:1; transform:none; }
     .fu.d1 { transition-delay:.08s; }
@@ -85,9 +79,6 @@
     .fu.d3 { transition-delay:.30s; }
     .fu.d4 { transition-delay:.44s; }
 
-    /* ═══════════════════════════════════════
-       NAV
-    ════════════════════════════════════════ */
     #site-header {
       position: fixed; inset-x: 0; top: 0; z-index: 50;
       transition: padding .35s var(--ease-out), background .35s, box-shadow .35s, border-color .35s;
@@ -131,9 +122,6 @@
     }
     .lang-toggle:hover { color: var(--navy); border-color: rgba(26,111,224,0.4); background: #fff; }
 
-    /* ═══════════════════════════════════════
-       BUTTONS
-    ════════════════════════════════════════ */
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
       background: var(--blue); color: #fff; border-radius: 12px;
@@ -159,9 +147,6 @@
     }
     .btn-outline:hover { border-color: var(--blue); background: rgba(26,111,224,0.04); color: var(--blue); transform: translateY(-1px); }
 
-    /* ═══════════════════════════════════════
-       SECTION LABEL
-    ════════════════════════════════════════ */
     .section-label {
       display: inline-flex; align-items: center; gap: 8px;
       font-family: "Plus Jakarta Sans", sans-serif;
@@ -178,11 +163,6 @@
       font-weight: 800; letter-spacing: -.045em; line-height: 1.05; color: var(--navy);
     }
 
-    /* ═══════════════════════════════════════
-       HERO — TURN 2 UPGRADES
-    ════════════════════════════════════════ */
-
-    /* Eyebrow pill — more dramatic */
     .eyebrow-pill {
       display: inline-flex; align-items: center; gap: 10px;
       border: 1px solid rgba(0,184,148,0.32);
@@ -192,11 +172,9 @@
       box-shadow: 0 0 0 4px rgba(0,184,148,0.05);
     }
 
-    /* Headline word-level color shift */
     .hero-word-blue { color: var(--blue); }
     .hero-word-teal { color: var(--teal); }
 
-    /* Underline accent on key headline word */
     .hero-underline {
       position: relative; display: inline-block;
     }
@@ -210,7 +188,6 @@
     }
     @keyframes underline-in { to { transform: scaleX(1); } }
 
-    /* ── TERMINAL RIGHT PANEL ── */
     .terminal-panel {
       background: #0B1628;
       border-radius: 20px;
@@ -242,7 +219,6 @@
     .t-yellow { color: #FCD34D; }
     .t-prompt { color: #4f7dba; }
 
-    /* typewriter cursor */
     .tw-cursor {
       display: inline-block; width: 7px; height: .9em;
       background: #00C9A0; border-radius: 1px;
@@ -251,14 +227,12 @@
     }
     @keyframes cursor-blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
-    /* terminal line fade-in */
     .t-line {
       opacity: 0;
       animation: t-fadein .35s var(--ease-out) forwards;
     }
     @keyframes t-fadein { to { opacity: 1; } }
 
-    /* terminal status badges */
     .t-badge {
       display: inline-flex; align-items: center; gap: 5px;
       background: rgba(0,184,148,0.12);
@@ -280,7 +254,6 @@
       color: #FCD34D;
     }
 
-    /* terminal progress bar */
     .t-progress-track {
       height: 4px; border-radius: 2px;
       background: rgba(255,255,255,0.08);
@@ -294,7 +267,6 @@
     }
     @keyframes progress-in { to { transform: scaleX(1); } }
 
-    /* ── FACT BARS (replaces stat strip) ── */
     .fact-bars { display: flex; flex-direction: column; gap: .6rem; margin-top: 2.5rem; }
     .fact-bar {
       display: flex; align-items: center; gap: 1rem;
@@ -335,9 +307,6 @@
       display: flex; align-items: center; justify-content: center;
     }
 
-    /* ═══════════════════════════════════════
-       PROBLEM CARDS
-    ════════════════════════════════════════ */
     .prob-card {
       background: #fff; border: 1.5px solid var(--border); border-radius: 20px;
       padding: 1.85rem;
@@ -353,9 +322,6 @@
     .prob-card:hover::before { opacity: 1; }
     .prob-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.1rem; }
 
-    /* ═══════════════════════════════════════
-       SERVICE CARDS
-    ════════════════════════════════════════ */
     .sc {
       background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 1.6rem;
       transition: border-color .2s, box-shadow .2s, transform .22s var(--ease-out);
@@ -369,18 +335,12 @@
       font-size: .65rem; font-weight: 700; color: var(--blue); letter-spacing: .04em; flex-shrink: 0;
     }
 
-    /* ═══════════════════════════════════════
-       WHY CARDS
-    ════════════════════════════════════════ */
     .wc {
       background: #fff; border: 1.5px solid var(--border); border-radius: 16px; padding: 1.6rem;
       transition: box-shadow .2s, transform .22s var(--ease-out);
     }
     .wc:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
 
-    /* ═══════════════════════════════════════
-       STEP NUMBERS
-    ════════════════════════════════════════ */
     .step-num {
       font-family: "Bricolage Grotesque", sans-serif;
       font-size: 3.2rem; font-weight: 800;
@@ -389,9 +349,6 @@
       background-clip: text; line-height: 1; letter-spacing: -.06em;
     }
 
-    /* ═══════════════════════════════════════
-       VISION DARK CARD
-    ════════════════════════════════════════ */
     .vision-card {
       background: linear-gradient(142deg, #091422 0%, #0C1E3D 45%, #082B1E 100%);
       border-radius: 28px; padding: clamp(2.5rem, 5.5vw, 4.5rem);
@@ -420,14 +377,8 @@
       background-size: 100% 4px; pointer-events: none; opacity: .6;
     }
 
-    /* ═══════════════════════════════════════
-       RULE
-    ════════════════════════════════════════ */
     .rule { height: 1px; background: linear-gradient(90deg, transparent, #DDE3EE 25%, #DDE3EE 75%, transparent); }
 
-    /* ═══════════════════════════════════════
-       BILINGUAL
-    ════════════════════════════════════════ */
     [data-lang="id"]             { display: none; }
     body.id [data-lang="en"]     { display: none; }
     body.id [data-lang="id"]     { display: block; }
@@ -435,9 +386,6 @@
     body.id span[data-lang="en"] { display: none; }
     span[data-lang="id"]         { display: none; }
 
-    /* ═══════════════════════════════════════
-       ANIMATIONS
-    ════════════════════════════════════════ */
     @keyframes pr { 0%,100%{ box-shadow:0 0 0 0 rgba(0,184,148,.5); } 50%{ box-shadow:0 0 0 7px rgba(0,184,148,0); } }
     .pulse { animation: pr 2.8s ease-in-out infinite; }
     @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.2;} }
@@ -460,9 +408,6 @@
       box-shadow: var(--shadow-sm);
     }
 
-    /* ═══════════════════════════════════════
-       MOBILE NAV
-    ════════════════════════════════════════ */
     #mobile-menu {
       display: none; position: fixed; inset-x: 0; top: 0; z-index: 49;
       background: rgba(255,255,255,0.97); backdrop-filter: blur(20px);
@@ -491,7 +436,6 @@
 
   <div class="relative">
 
-    <!-- ═══════════ NAV ═══════════ -->
     <header id="site-header">
       <div class="inner">
         <a href="#" class="flex items-center gap-3 select-none flex-shrink-0">
@@ -532,19 +476,11 @@
 
     <main>
 
-      <!-- ══════════════════════════════════════════════
-           HERO — TURN 2
-           Split layout preserved; headline bolder;
-           right panel → terminal status monitor;
-           stats strip → 3 animated fact bars
-      ══════════════════════════════════════════════ -->
       <section class="hero-bg mx-auto max-w-6xl px-6 pb-28 pt-40">
         <div class="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
 
-          <!-- LEFT ──────────────────────────────── -->
           <div>
 
-            <!-- Eyebrow pill — more dramatic -->
             <div class="eyebrow-pill mb-9 inline-flex fu">
               <span class="h-2 w-2 rounded-full bg-teal pulse flex-shrink-0"></span>
               <span class="text-[.7rem] font-bold uppercase tracking-[.22em] text-teal">
@@ -553,7 +489,6 @@
               </span>
             </div>
 
-            <!-- HEADLINE — bold, typographic -->
             <h1 class="display-heading fu d1" style="font-size:clamp(2.7rem,5.5vw,4.1rem); letter-spacing:-.05em; line-height:1.02">
               <span data-lang="en">
                 We solve your<br>
@@ -567,13 +502,11 @@
               </span>
             </h1>
 
-            <!-- Sub -->
             <p class="mt-8 max-w-[46ch] text-[1.025rem] leading-[1.9] text-slate fu d2">
               <span data-lang="en">Global Telko is a consulting firm that builds. Expert technology consulting today — and platforms being developed to free your organisation from vendor lock-in tomorrow.</span>
               <span data-lang="id">Global Telko adalah consulting firm yang membangun. Konsultasi teknologi hari ini — dan platform yang sedang dikembangkan untuk membebaskan organisasi Anda dari vendor lock-in.</span>
             </p>
 
-            <!-- CTAs -->
             <div class="mt-9 flex flex-wrap items-center gap-4 fu d3">
               <a href="#how-we-help" class="btn-primary">
                 <span data-lang="en">See how we help</span>
@@ -586,9 +519,7 @@
               </a>
             </div>
 
-            <!-- 3 ANIMATED FACT BARS -->
             <div class="fact-bars fu d4">
-              <!-- Bar 1 -->
               <div class="fact-bar">
                 <div class="fact-bar-num">7+</div>
                 <div class="fact-bar-divider"></div>
@@ -600,7 +531,6 @@
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="5" height="5" rx="1" stroke="#1A6FE0" stroke-width="1.3"/><rect x="8" y="1" width="5" height="5" rx="1" stroke="#1A6FE0" stroke-width="1.3"/><rect x="1" y="8" width="5" height="5" rx="1" stroke="#1A6FE0" stroke-width="1.3"/><rect x="8" y="8" width="5" height="5" rx="1" stroke="#1A6FE0" stroke-width="1.3"/></svg>
                 </div>
               </div>
-              <!-- Bar 2 -->
               <div class="fact-bar">
                 <div class="fact-bar-num" style="color:var(--teal)">AI</div>
                 <div class="fact-bar-divider"></div>
@@ -612,7 +542,6 @@
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1.5A5.5 5.5 0 1 0 12.5 7" stroke="#00B894" stroke-width="1.3" stroke-linecap="round"/><path d="M10 1.5l2.5 2.5L10 6.5" stroke="#00B894" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </div>
               </div>
-              <!-- Bar 3 -->
               <div class="fact-bar">
                 <div class="fact-bar-num" style="font-size:1.25rem;letter-spacing:-.02em;line-height:1.1;color:var(--navy)">Prod.</div>
                 <div class="fact-bar-divider"></div>
@@ -627,12 +556,9 @@
             </div>
 
           </div>
-          <!-- END LEFT -->
 
-          <!-- RIGHT: TERMINAL STATUS MONITOR ──────────── -->
           <div class="terminal-panel fu d2 sticky" style="top:7rem">
 
-            <!-- Titlebar -->
             <div class="terminal-titlebar">
               <span class="terminal-dot" style="background:#FF5F57"></span>
               <span class="terminal-dot" style="background:#FFBD2E"></span>
@@ -644,7 +570,6 @@
               </span>
             </div>
 
-            <!-- Terminal body -->
             <div class="terminal-body">
 
               <div class="t-line" style="animation-delay:.3s">
@@ -657,7 +582,6 @@
                 <span class="t-dim">──────────────────────────────</span>
               </div>
 
-              <!-- Service lines -->
               <div class="t-line mt-2" style="animation-delay:1.2s">
                 <span class="t-teal">●</span> <span class="t-white">ai-inference</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <span class="t-badge">RUNNING</span>
@@ -688,7 +612,6 @@
                 <span class="t-dim">──────────────────────────────</span>
               </div>
 
-              <!-- Deployment progress -->
               <div class="t-line mt-2" style="animation-delay:2.5s">
                 <span class="t-muted">Deployment pipeline</span>
               </div>
@@ -706,16 +629,14 @@
                 <span class="t-prompt">›</span> <span class="t-muted">_</span><span class="tw-cursor" style="animation-delay:3.8s"></span>
               </div>
 
-            </div><!-- /terminal-body -->
+            </div>
           </div>
-          <!-- END RIGHT -->
 
         </div>
       </section>
 
       <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ═══════════ HOW WE HELP ═══════════ -->
       <section id="how-we-help" class="mx-auto max-w-6xl px-6 py-28">
         <p class="section-label mb-5 fu"><span data-lang="en">Start with the problem, not the service</span><span data-lang="id">Mulai dari masalah, bukan layanan</span></p>
         <div class="mb-16 grid gap-6 lg:grid-cols-2 fu">
@@ -762,7 +683,6 @@
 
       <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ═══════════ SERVICES ═══════════ -->
       <section id="services" class="mx-auto max-w-6xl px-6 py-28">
         <p class="section-label mb-5 fu"><span data-lang="en">Full-spectrum capabilities</span><span data-lang="id">Kapabilitas full-spectrum</span></p>
         <div class="mb-16 grid gap-6 lg:grid-cols-2 fu">
@@ -801,7 +721,6 @@
 
       <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ═══════════ APPROACH ═══════════ -->
       <section id="approach" class="mx-auto max-w-6xl px-6 py-28">
         <p class="section-label mb-5 fu"><span data-lang="en">How we work</span><span data-lang="id">Cara kami bekerja</span></p>
         <h2 class="display-heading mb-16 max-w-3xl fu" style="font-size:clamp(2rem,4.2vw,3.1rem)">
@@ -818,7 +737,6 @@
 
       <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ═══════════ VISION ═══════════ -->
       <section id="vision" class="mx-auto max-w-6xl px-6 py-28">
         <div class="vision-card fu">
           <div class="grid-dots"></div>
@@ -843,7 +761,6 @@
 
       <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ═══════════ WHY US ═══════════ -->
       <section id="why" class="mx-auto max-w-6xl px-6 py-28">
         <p class="section-label mb-5 fu"><span data-lang="en">Why Global Telko</span><span data-lang="id">Mengapa Global Telko</span></p>
         <h2 class="display-heading mb-5 max-w-3xl fu" style="font-size:clamp(2rem,4.2vw,3.1rem)">
@@ -866,7 +783,6 @@
 
       <div class="rule mx-6 md:mx-auto md:max-w-6xl"></div>
 
-      <!-- ═══════════ CONTACT ═══════════ -->
       <section id="contact" class="mx-auto max-w-6xl px-6 py-28">
         <div class="grid gap-16 lg:grid-cols-[1.2fr_.8fr] lg:items-start">
           <div class="fu">
@@ -899,7 +815,6 @@
       </section>
     </main>
 
-    <!-- ═══════════ FOOTER ═══════════ -->
     <footer class="border-t" style="border-color:var(--border);background:var(--bg)">
       <div class="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-8 text-xs md:flex-row md:items-center md:justify-between" style="color:var(--slate-lt)">
         <div class="flex items-center gap-3">
@@ -921,6 +836,11 @@
       { threshold: 0.05 }
     );
     document.querySelectorAll('.fu').forEach(el => io.observe(el));
+
+    /* Failsafe: force-reveal any .fu element the observer missed (slow connections, throttled tabs, ad-blockers, etc.) */
+    setTimeout(() => {
+      document.querySelectorAll('.fu:not(.on)').forEach(el => el.classList.add('on'));
+    }, 2500);
 
     /* Nav scroll-aware */
     const header = document.getElementById('site-header');
