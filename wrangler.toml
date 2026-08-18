@@ -1,0 +1,6 @@
+name = "globaltelko-web"
+account_id = "e9cf5fb540d392a127aa1f6fb6e77664"
+compatibility_date = "2024-09-23"
+
+[assets]
+directory = "./"
