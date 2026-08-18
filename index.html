@@ -100,6 +100,7 @@
       max-width: 72rem; margin-inline: auto; padding-inline: 1.5rem;
       display: flex; align-items: center; justify-content: space-between;
     }
+    .nav-divider { width: 1px; height: 20px; background: var(--border); flex-shrink: 0; }
     .nl {
       position: relative; color: var(--slate);
       font-family: "Plus Jakarta Sans", sans-serif;
@@ -196,6 +197,7 @@
       overflow: hidden;
       box-shadow: 0 24px 60px rgba(11,22,40,0.22), 0 4px 16px rgba(11,22,40,0.14);
       border: 1px solid rgba(255,255,255,0.06);
+      margin-top: -6px;
     }
     .terminal-titlebar {
       background: #111E35;
@@ -443,21 +445,24 @@
         <a href="#" class="flex items-center gap-3 select-none flex-shrink-0">
           <img src="https://raw.githubusercontent.com/Aldhie/globaltelko-web/main/Logo%20copy%204.png" alt="Global Telko Informatika" class="h-8 w-auto object-contain" />
         </a>
-        <nav class="hidden items-center gap-8 md:flex">
-          <a href="#how-we-help" class="nl"><span data-lang="en">How we help</span><span data-lang="id">Cara kami</span></a>
-          <a href="#services"    class="nl"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a>
-          <a href="#vision"      class="nl"><span data-lang="en">Vision</span><span data-lang="id">Visi</span></a>
-          <a href="#contact"     class="nl"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a>
-          <button id="lang-btn" class="lang-toggle">ID</button>
-        </nav>
-        <div class="flex items-center gap-3">
-          <a href="#contact" class="hidden md:flex btn-primary" style="padding:.65rem 1.2rem;font-size:.8rem;border-radius:10px">
-            <span data-lang="en">Talk to us</span><span data-lang="id">Hubungi kami</span>
-          </a>
-          <button class="ham md:hidden" id="ham-btn" aria-label="Open menu">
-            <span></span><span></span><span></span>
-          </button>
+        <div class="hidden items-center gap-10 md:flex">
+          <nav class="flex items-center gap-8">
+            <a href="#how-we-help" class="nl"><span data-lang="en">How we help</span><span data-lang="id">Cara kami</span></a>
+            <a href="#services"    class="nl"><span data-lang="en">Services</span><span data-lang="id">Layanan</span></a>
+            <a href="#vision"      class="nl"><span data-lang="en">Vision</span><span data-lang="id">Visi</span></a>
+            <a href="#contact"     class="nl"><span data-lang="en">Contact</span><span data-lang="id">Kontak</span></a>
+          </nav>
+          <span class="nav-divider"></span>
+          <div class="flex items-center gap-4">
+            <button id="lang-btn" class="lang-toggle">ID</button>
+            <a href="#contact" class="btn-primary" style="padding:.65rem 1.2rem;font-size:.8rem;border-radius:10px">
+              <span data-lang="en">Talk to us</span><span data-lang="id">Hubungi kami</span>
+            </a>
+          </div>
         </div>
+        <button class="ham md:hidden" id="ham-btn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </header>
 
@@ -495,12 +500,12 @@
               <span data-lang="en">
                 We solve your<br>
                 <span class="hero-underline" style="color:var(--blue)">technology</span> problems<br>
-                <span style="color:var(--slate);font-weight:500;font-size:.62em;letter-spacing:-.02em">today.</span>&ensp;<span style="color:var(--teal)">Tomorrow</span><span style="color:var(--slate);font-weight:500"> too.</span>
+                <span style="color:var(--slate);font-weight:500;font-size:.56em;letter-spacing:-.01em">today. <span style="color:var(--teal)">Tomorrow</span> too.</span>
               </span>
               <span data-lang="id">
                 Kami selesaikan<br>
                 masalah <span class="hero-underline" style="color:var(--blue)">teknologi</span> Anda<br>
-                <span style="color:var(--slate);font-weight:500;font-size:.62em;letter-spacing:-.02em">hari ini.</span>&ensp;<span style="color:var(--teal)">Esok</span><span style="color:var(--slate);font-weight:500"> juga.</span>
+                <span style="color:var(--slate);font-weight:500;font-size:.56em;letter-spacing:-.01em">hari ini. <span style="color:var(--teal)">Esok</span> juga.</span>
               </span>
             </h1>
 
